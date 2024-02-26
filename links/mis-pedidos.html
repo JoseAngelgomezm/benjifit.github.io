@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta</title>
+    <link rel="stylesheet" href="../Styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=PT+Sans&family=Raleway&display=swap"
+        rel="stylesheet">
+
+    <script src="../jq/jquery-3.7.1.js"></script>
+    <script src="../script/eventosRaton.js"></script>
+    <script src="../script/menu-cuenta-desplegable.js"></script>
+    <script src="../script/desplegar-pedido.js"></script>
+</head>
+
+<body>
+    <div class="transparente"></div>
+
+    <header>
+        <nav id="menu-navegacion-movil">
+            <ul>
+                <li id="logo-movil"><a href="../index.html"><img id="img-logo-movil" src="../Images/logo_png.png"
+                            alt="iamgen del logo de benjifit"></a></li>
+                <li id="login"><a href="login.html"><img src="../Icons/Login.svg" alt="icono para inicar sesion"></a>
+                </li>
+                <li id="carrito"><a href="carrito.html"><img src="../Icons/Carrito.svg"
+                            alt="icono que te lleva al carrito"></a></li>
+                <li id="icono-hamburguesa"><img id="hamburguesa" src="../Icons/Hamburguesa.svg"
+                        alt="icono que despliega el menu de navegacion"></li>
+            </ul>
+        </nav>
+
+        <nav id="menu-navegacion-escritorio">
+            <ul>
+                <li id="logo-escritorio"><a href="index.html"><img src="../Images/logo_png.png"
+                            alt="imagen del logo de benjifit"></a></li>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li id="login-escritorio"><a href="login.html"><img src="../Icons/Login.svg"
+                            alt="icono para inicar sesion"></a>
+                </li>
+                <li id="carrito-escritorio"><a href="carrito.html"><img src="../Icons/Carrito.svg"
+                            alt="icono que te lleva al carrito"></a></li>
+            </ul>
+        </nav>
+
+        <nav id="menu-desplegable">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="login.html">Mi cuenta</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div id="imagen-fondo">
+            </div>
+            <picture>
+                <img src="../Icons/Cerrar.svg" alt="">
+            </picture>
+        </nav>
+    </header>
+
+    <main id="mis-pedidos">
+        <nav class="menu-mi-cuenta">
+            <ul>
+                <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+                <li><a href="mis-pedidos.html">Mis pedidos</a></li>
+                <li><a href="metodos-pago.html">Métodos de pago</a></li>
+            </ul>
+
+        </nav>
+
+        <h2 class="desplegable"><img src="../Icons/Puntos.svg"
+                alt="icono que abre el menu de navegacion de la cuenta"><span>MIS PEDIDOS</span></h2>
+
+        <article>
+            <div class="fondo-gris">
+                <div>
+                    <span>Numero de pedido: </span>
+                    <span>1234123214 </span>
+                </div>
+                <div>
+                    <span>Fecha: </span>
+                    <span>28/09/2002 </span>
+                </div>
+
+                <div>
+                    <span>Estado: </span>
+                    <span>Procesando pago</span>
+                </div>
+
+                <div>
+                    <span>Factura: </span>
+                    <span>Descargar factura <img src="../Icons/Descargar.svg" alt="icono para descargar la factura">
+                    </span>
+                </div>
+            </div>
+
+            <img src="../Icons/Añadir.svg" alt="icono desplegar pedido">
+        </article>
+
+        <article>
+            <div class="fondo-gris">
+                <div>
+                    <span>Numero de pedido: </span>
+                    <span>1234123214 </span>
+                </div>
+                <div>
+                    <span>Fecha: </span>
+                    <span>28/09/2002 </span>
+                </div>
+
+                <div>
+                    <span>Estado: </span>
+                    <span>Procesando pago</span>
+                </div>
+
+                <div>
+                    <span>Factura: </span>
+                    <span>Descargar factura <img src="../Icons/Descargar.svg" alt="icono para descargar la factura">
+                    </span>
+                </div>
+            </div>
+
+            <img src="../Icons/Añadir.svg" alt="icono desplegar pedido">
+        </article>
+
+        <article>
+            <div class="fondo-gris">
+                <div>
+                    <span>Numero de pedido: </span>
+                    <span>1234123214 </span>
+                </div>
+                <div>
+                    <span>Fecha: </span>
+                    <span>28/09/2002 </span>
+                </div>
+
+                <div>
+                    <span>Estado: </span>
+                    <span>Procesando pago</span>
+                </div>
+
+                <div>
+                    <span>Factura: </span>
+                    <span>Descargar factura <img src="../Icons/Descargar.svg" alt="icono para descargar la factura">
+                    </span>
+                </div>
+            </div>
+
+            <img src="../Icons/Añadir.svg" alt="icono desplegar pedido">
+        </article>
+    </main>
+
+
+    <footer>
+        <div id="social">
+            <a href=""><img src="../Icons/Instagram.svg" alt="icono con enlace al canal de benjifit de instagram"></a>
+            <a href=""><img src="../Icons/Youtube.svg" alt="icono con enlace al canal de benjifit de youtube"></a>
+        </div>
+
+        <nav id="social-links">
+            <ul>
+                <li><a href="cookies.html">Politica de cookies</a></li>
+                <li><a href="avisolegal.html">Aviso Legal</a></li>
+                <li><a href="politicaprivacidad.html">Politica de privacidad</a></li>
+                <li id="copy-text"><span>2023 All rights reserverd. Realizada por Jose Angel Gomez Morillo</span></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

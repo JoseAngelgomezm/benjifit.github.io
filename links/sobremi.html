@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Basico</title>
+    <link rel="stylesheet" href="../Styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=PT+Sans&family=Raleway&display=swap"
+        rel="stylesheet">
+
+    <script src="../jq/jquery-3.7.1.js"></script>
+    <script src="../script/eventosRaton.js"></script>
+    <script src="../script/video.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="menu-navegacion-movil">
+            <ul>
+                <li id="logo-movil"><a href="../index.html"><img id="img-logo-movil" src="../Images/logo_png.png"
+                            alt="iamgen del logo de benjifit"></a></li>
+                <li id="login"><a href="login.html"><img src="../Icons/Login.svg" alt="icono para inicar sesion"></a>
+                </li>
+                <li id="carrito"><a href="carrito.html"><img src="../Icons/Carrito.svg"
+                            alt="icono que te lleva al carrito"></a></li>
+                <li id="icono-hamburguesa"><img id="hamburguesa" src="../Icons/Hamburguesa.svg"
+                        alt="icono que despliega el menu de navegacion"></li>
+            </ul>
+        </nav>
+
+        <nav id="menu-navegacion-escritorio">
+            <ul>
+                <li id="logo-escritorio"><a href="index.html"><img src="../Images/logo_png.png"
+                            alt="imagen del logo de benjifit"></a></li>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li id="login-escritorio"><a href="login.html"><img src="../Icons/Login.svg"
+                            alt="icono para inicar sesion"></a>
+                </li>
+                <li id="carrito-escritorio"><a href="carrito.html"><img src="../Icons/Carrito.svg"
+                            alt="icono que te lleva al carrito"></a></li>
+            </ul>
+        </nav>
+
+        <nav id="menu-desplegable">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="login.html">Mi cuenta</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div id="imagen-fondo">
+            </div>
+            <picture>
+                <img src="../Icons/Cerrar.svg" alt="">
+            </picture>
+        </nav>
+    </header>
+
+    <main id="sobremi">
+        <h2>SOBRE MI</h2>
+        <div id="premios">
+            <h3>Premios</h3>
+            <ul>
+                <li>Premio 1</li>
+                <li>Premio 2</li>
+                <li>Premio 3</li>
+                <li>Premio 4</li>
+                <li>Premio 5</li>
+            </ul>
+        </div>
+        <p>En este fragmento de video, se explica quien soy, mi dedicacion por la profesion y una introducción sobre
+            como llevo a cabo mi trabajo </p>
+        <div id="reproductor">
+
+            <video id="videoHTML" poster="../Images/trailer.png">
+                <source src="../videos/trailer.webm">
+                <source src="../videos/trailer.ogv">
+                <source src="../videos/trailer.mp4">
+                <source src="../videos/trailer.swf">
+            </video>
+
+            <div id="controles">
+                <input id="barra-progreso" max="0" min="0" type="range">
+                <button id="play-pause"><svg id="svgPlay" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" />
+                        <path d="m9 17 8-5-8-5z" />
+                    </svg></button>
+                <button id="stop"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" />
+                        <path d="M9 9h6v6H9z" />
+                    </svg></button>
+                <div id="tiempo-actual">00:00 /</div>
+                <div id="tiempo-total">00:00</div>
+                <button id="backward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" />
+                        <path d="M11 16V8l-5 4zm6 0V8l-5 4z" />
+                    </svg></button>
+                <button id="forward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" />
+                        <path d="m13 16 5-4-5-4zm-6 0 5-4-5-4z" />
+                    </svg></button>
+                <button id="velocity-1">x1</button>
+                <button id="velocity-15">x1.5</button>
+                <button id="velocity-2">x2</button>
+                <button id="mute-unmute"><svg id="svgMute" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M16 21c3.527-1.547 5.999-4.909 5.999-9S19.527 4.547 16 3v2c2.387 1.386 3.999 4.047 3.999 7S18.387 17.614 16 19v2z" />
+                        <path
+                            d="M16 7v10c1.225-1.1 2-3.229 2-5s-.775-3.9-2-5zM4 17h2.697l5.748 3.832a1.004 1.004 0 0 0 1.027.05A1 1 0 0 0 14 20V4a1 1 0 0 0-1.554-.832L6.697 7H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2zm0-8h3c.033 0 .061-.016.093-.019a1.027 1.027 0 0 0 .38-.116c.026-.015.057-.017.082-.033L12 5.868v12.264l-4.445-2.964c-.025-.017-.056-.02-.082-.033a.986.986 0 0 0-.382-.116C7.059 15.016 7.032 15 7 15H4V9z" />
+                    </svg></button>
+                <input id="barra-volumen" type="range" step="0.1" min="0" value="1" max="1">
+                <button id="fullscreen"><svg id="svgMute" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path d="M5 5h5V3H3v7h2zm5 14H5v-5H3v7h7zm11-5h-2v5h-5v2h7zm-2-4h2V3h-7v2h5z" />
+                    </svg></button>
+            </div>
+        </div>
+
+        <div id="galeria-imagenes-clientes">
+            <h2>Galeria Imagenes</h2>
+
+            <div id="contenido-galeria">
+                <img src="../Icons/Izquierda.svg" alt="icono para pasar hacia atrás el carrusel">
+
+                <div id="antes">
+                    <h3>Antes</h3>
+                    <img src="../Images/foto_basico.webp" alt="">
+                </div>
+
+                <div id="despues">
+                    <h3>Despues</h3>
+                    <img src="../images/Foto_Premium.webp" alt="">
+                </div>
+
+                <img src="../Icons/Derecha.svg" alt="icono para pasar hacia adelante el carrusel">
+            </div>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <div id="social">
+            <a href=""><img src="../Icons/Instagram.svg" alt="icono con enlace al canal de benjifit de instagram"></a>
+            <a href=""><img src="../Icons/Youtube.svg" alt="icono con enlace al canal de benjifit de youtube"></a>
+        </div>
+
+        <nav id="social-links">
+            <ul>
+                <li><a href="">Politica de cookies</a></li>
+                <li><a href="">Aviso Legal</a></li>
+                <li><a href="">Politica de privacidad</a></li>
+                <li id="copy-text"><span>2023 All rights reserverd. Realizada por Jose Angel Gomez Morillo</span></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

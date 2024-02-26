@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="../Styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=PT+Sans&family=Raleway&display=swap"
+        rel="stylesheet">
+
+    <script src="../jq/jquery-3.7.1.js"></script>
+    <script src="../script/eventosRaton.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="menu-navegacion-movil">
+            <ul>
+                <li id="logo-movil"><a href="../index.html"><img id="img-logo-movil" src="../Images/logo_png.png"
+                            alt="iamgen del logo de benjifit"></a></li>
+                <li id="login"><a href="login.html"><img src="../Icons/Login.svg" alt="icono para inicar sesion"></a>
+                </li>
+                <li id="carrito"><a href="carrito.html"><img src="../Icons/Carrito.svg"
+                            alt="icono que te lleva al carrito"></a></li>
+                <li id="icono-hamburguesa"><img id="hamburguesa" src="../Icons/Hamburguesa.svg"
+                        alt="icono que despliega el menu de navegacion"></li>
+            </ul>
+        </nav>
+
+        <nav id="menu-navegacion-escritorio">
+            <ul>
+                <li id="logo-escritorio"><a href="index.html"><img src="../Images/logo_png.png"
+                            alt="imagen del logo de benjifit"></a></li>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li id="login-escritorio"><a href="login.html"><img src="../Icons/Login.svg"
+                            alt="icono para inicar sesion"></a>
+                </li>
+                <li id="carrito-escritorio"><a href="carrito.html"><img src="../Icons/Carrito.svg"
+                            alt="icono que te lleva al carrito"></a></li>
+            </ul>
+        </nav>
+
+        <nav id="menu-desplegable">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="login.html">Mi cuenta</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div id="imagen-fondo">
+            </div>
+            <picture>
+                <img src="../Icons/Cerrar.svg" alt="">
+            </picture>
+        </nav>
+    </header>
+
+    <main id="carrito-compra">
+        <h2>CARRITO</h2>
+        <div class="productos">
+            <img src="../Images/foto_basico.webp" alt="">
+            <div>
+                <div>Producto: </div>
+                <div class="rojo">Tipo de plan</div>
+            </div>
+
+            <div>
+                <div>Precio: </div>
+                <div class="rojo">0,00€</div>
+            </div>
+
+            <div>
+                <div>Cantidad: </div>
+                <div class="rojo">x1</div>
+            </div>
+
+            <div>
+                <div>Subtotal: </div>
+                <div class="rojo">0,00€</div>
+            </div>
+
+        </div>
+
+        <div id="total-carrito">
+            <h3>Total del carrito</h3>
+            <div>
+                <div>Total: </div>
+                <div class="rojo">0,00€</div>
+            </div>
+        </div>
+
+        <div id="descuento">
+            <input type="text" placeholder="Introduce un cupón">
+            <a href="#">Aplicar</a>
+        </div>
+
+        <div id="botones-carrito">
+            <a href="planes.html">VOLVER</a>
+            <a href="finalizarcompra.html">FINALIZAR <br> PEDIDO</a>
+
+        </div>
+    </main>
+
+    <footer>
+        <div id="social">
+            <a href=""><img src="../Icons/Instagram.svg" alt="icono con enlace al canal de benjifit de instagram"></a>
+            <a href=""><img src="../Icons/Youtube.svg" alt="icono con enlace al canal de benjifit de youtube"></a>
+        </div>
+
+        <nav id="social-links">
+            <ul>
+                <li><a href="">Politica de cookies</a></li>
+                <li><a href="">Aviso Legal</a></li>
+                <li><a href="">Politica de privacidad</a></li>
+                <li id="copy-text"><span>2023 All rights reserverd. Realizada por Jose Angel Gomez Morillo</span></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="../Styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=PT+Sans&family=Raleway&display=swap"
+        rel="stylesheet">
+
+    <script src="../jq/jquery-3.7.1.js"></script>
+    <script src="../script/eventosRaton.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="menu-navegacion-movil">
+            <ul>
+                <li id="logo-movil"><a href="../index.html"><img id="img-logo-movil" src="../Images/logo_png.png"
+                            alt="iamgen del logo de benjifit"></a></li>
+                <li id="login"><a href="login.html"><img src="../Icons/Login.svg" alt="icono para inicar sesion"></a>
+                </li>
+                <li id="carrito"><a href="carrito.html"><img src="../Icons/Carrito.svg"
+                            alt="icono que te lleva al carrito"></a></li>
+                <li id="icono-hamburguesa"><img id="hamburguesa" src="../Icons/Hamburguesa.svg"
+                        alt="icono que despliega el menu de navegacion"></li>
+            </ul>
+        </nav>
+
+        <nav id="menu-navegacion-escritorio">
+            <ul>
+                <li id="logo-escritorio"><a href="index.html"><img src="../Images/logo_png.png"
+                            alt="imagen del logo de benjifit"></a></li>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li id="login-escritorio"><a href="login.html"><img src="../Icons/Login.svg"
+                            alt="icono para inicar sesion"></a>
+                </li>
+                <li id="carrito-escritorio"><a href="carrito.html"><img src="../Icons/Carrito.svg"
+                            alt="icono que te lleva al carrito"></a></li>
+            </ul>
+        </nav>
+
+        <nav id="menu-desplegable">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="login.html">Mi cuenta</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div id="imagen-fondo">
+            </div>
+            <picture>
+                <img src="../Icons/Cerrar.svg" alt="">
+            </picture>
+        </nav>
+    </header>
+
+    <main id="finalizar-compra">
+        <h2>FINALIZAR COMPRA</h2>
+        <div id="links-inicio-registro">
+            <span>¿Ya tienes una cuenta? <a class="rojo" href="login.html">Iniciar sesión</a></span>
+            <span>Si no tienes una cuenta <a class="rojo" href="registro.html">Regístrate</a></span>
+        </div>
+        <form class="registro" action="confirmarpedido.html">
+            <div id="datos-cliente">
+                <div>
+                    <label for="nombre">Nombre:</label><span class="rojo">*</span>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+
+                <div>
+                    <label for="apellidos">Apellidos:</label><span class="rojo">*</span>
+                    <input type="text" name="apellidos" id="apellidos">
+                </div>
+
+                <div class="completo">
+                    <label for="empresa">Empresa:</label>
+                    <input type="text" name="empresa" id="empresa">
+                </div>
+
+
+                <div>
+                    <label for="poblacion">Poblacion: <span class="rojo">*</span></label>
+                    <input type="text" name="poblacion" id="poblacion">
+                </div>
+
+                <div>
+                    <label for="codigopostal">Código Postal: <span class="rojo">*</span></label>
+                    <input type="number" maxlength="5" name="codigopostal" id="codigopostal">
+                </div>
+
+                <div>
+                    <label for="provincia">Provincia: <span class="rojo">*</span></label>
+                    <input type="text" name="provincia" id="provincia">
+                </div>
+
+                <div>
+                    <label for="pais-region">País/Región: <span class="rojo">*</span></label>
+                    <input type="text" name="pais-region" id="pais-region">
+                </div>
+
+                <div>
+                    <label for="telefono-movil">Teléfono-móvil: <span class="rojo">*</span></label>
+                    <input type="number" maxlength="9" name="telefono-movil" id="telefono-movil">
+                </div>
+
+                <div>
+                    <label for="telefono-fijo">Telefono-fijo</label>
+                    <input type="text" maxlength="9" name="telefono-fijo" id="telefono-fijo">
+                </div>
+
+                <div class="completo">
+                    <label for="correo-electronico">Correo electónico: <span class="rojo">*</span></label>
+                    <input type="email" name="correo-electronico" id="correo-electronico">
+                </div>
+
+                <div class="completo">
+                    <label for="confirmar-correo-electronico">Confirmar correo: <span class="rojo">*</span></label>
+                    <input type="email" name="confirmar-correo-electronico" id="confirmar-correo-electronico">
+                </div>
+
+                <div class="completo">
+                    <input type="checkbox" name="crear-cuenta" id="crear-cuenta">
+                    <label for="crear-cuenta">¿Crear una cuenta?</label>
+                </div>
+
+                <div>
+                    <label for="informacion-adicional">Información adicional:</label>
+                    <input type="text" name="informacion-adicional" id="informacion-adicional">
+                </div>
+
+                <div class="completo">
+                    <input type="checkbox" name="politica-privacidad" id="politica-privacidad">
+                    <label class="letra-pequeña" for="politica-privacidad">Acepto las condiciones de uso, poítica de
+                        privacidad y aviso legal.</label>
+                </div>
+
+            </div>
+            <div class="productos">
+                <h3>Tu pedido</h3>
+                <div>
+                    <div>Producto: </div>
+                    <div>Subtotal: </div>
+                </div>
+
+                <div>
+                    <div>Plan basico - Mensual - x1: </div>
+                    <div class="rojo">0,00€</div>
+                </div>
+
+                <div>
+                    <div>Subtotal: </div>
+                    <div class="rojo">0,00€</div>
+                </div>
+
+                <div>
+                    <div>Total: </div>
+                    <div class="rojo">0,00€</div>
+                </div>
+
+            </div>
+            <div class="formulario-tarjeta">
+                <h3>Tarjeta de crédito</h3>
+
+                <div class="completo">
+                    <label for="numero-tarjeta">Numero de tarjeta:</label><span class="rojo">*</span>
+                    <input type="text" name="numero-tarjeta" id="numero-tarjeta">
+                </div>
+
+                <div>
+                    <label for="fecha-validez">Fecha de validez:</label><span class="rojo">*</span>
+                    <input type="text" name="fecha-validez" id="fecha-validez">
+                </div>
+
+                <div>
+                    <label for="cvv">CVV:</label><span class="rojo">*</span>
+                    <input type="text" name="cvv" id="cvv">
+                </div>
+
+            </div>
+            <button type="submit">FINALIZAR PAGO</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <div id="social">
+            <a href=""><img src="../Icons/Instagram.svg" alt="icono con enlace al canal de benjifit de instagram"></a>
+            <a href=""><img src="../Icons/Youtube.svg" alt="icono con enlace al canal de benjifit de youtube"></a>
+        </div>
+
+        <nav id="social-links">
+            <ul>
+                <li><a href="">Politica de cookies</a></li>
+                <li><a href="">Aviso Legal</a></li>
+                <li><a href="">Politica de privacidad</a></li>
+                <li id="copy-text"><span>2023 All rights reserverd. Realizada por Jose Angel Gomez Morillo</span></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

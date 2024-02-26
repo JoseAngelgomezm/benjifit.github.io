@@ -1,0 +1,1402 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.letra-pequeña {
+    font-size: 4pt;
+}
+
+.completo {
+    flex: 100%;
+}
+
+.fondo-gris {
+    background-color: #E0DEDE;
+}
+
+/* INICIO NAV MENU DESPLEGABLE EN MI CUENTA */
+
+h2.desplegable {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: flex-start;
+}
+
+h2.desplegable img {
+    width: 30px;
+    z-index: 2;
+}
+
+h2.desplegable img:hover {
+    cursor: pointer;
+}
+
+h2.desplegable span {
+    flex: 100%;
+}
+
+h2.desplegable span {
+    justify-self: center;
+}
+
+div.transparente {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000048;
+    z-index: 1;
+    display: none;
+}
+
+nav.menu-mi-cuenta {
+    display: none;
+    position: absolute;
+    top: 8.5rem;
+    z-index: 2;
+}
+
+
+nav.menu-mi-cuenta ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #E0DEDE;
+    list-style: none;
+}
+
+nav.menu-mi-cuenta ul li {
+    margin: 1rem;
+}
+
+nav.menu-mi-cuenta ul li a {
+    color: black;
+    text-decoration: none;
+
+}
+
+/* FIN NAV MENU DESPLEGABLE MI CUENTA */
+
+/* INICIO REPRODUCTOR DE VIDEO */
+
+div#reproductor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    font-size: 7pt;
+}
+
+div#reproductor video {
+    width: 100%;
+    height: auto;
+}
+
+div#reproductor {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 0;
+    border: solid 1px;
+}
+
+div#reproductor div#controles {
+    display: none;
+    position: relative;
+
+}
+
+div#reproductor>div#controles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(0deg, #000002 0%, #000000 35%, #ffffff00 100%);
+    gap: .4rem;
+}
+
+div#reproductor>div#controles>input#barra-progreso {
+    flex: 100%;
+}
+
+div#reproductor>div#controles>button#play-pause,
+div#reproductor>div#controles>button#stop,
+div#reproductor>div#controles>button#backward,
+div#reproductor>div#controles>button#forward,
+div#reproductor>div#controles>button#mute-unmute,
+div#reproductor>div#controles>button#fullscreen,
+div#reproductor>div#controles>button#velocity-1,
+div#reproductor>div#controles>button#velocity-15,
+div#reproductor>div#controles>button#velocity-2,
+div#reproductor>div#controles>div#tiempo-actual,
+div#reproductor>div#controles>div#tiempo-total {
+    color: white;
+    background: transparent;
+    border: transparent;
+    border-radius: 3rem;
+}
+
+div#reproductor button#mute-unmute,
+div#reproductor input#barra-volumen {
+    margin-left: auto;
+}
+
+div#reproductor input#barra-volumen {
+    margin: .5rem;
+}
+
+div#reproductor>div#controles button#play-pause>svg path,
+div#reproductor>div#controles button#stop>svg path,
+div#reproductor>div#controles button#backward>svg path,
+div#reproductor>div#controles button#forward>svg path,
+div#reproductor>div#controles button#mute-unmute>svg path,
+div#reproductor>div#controles button#fullscreen>svg path {
+    fill: red
+}
+
+div#reproductor>div#controles button#play-pause:hover,
+div#reproductor>div#controles button#stop:hover,
+div#reproductor>div#controles button#backward:hover,
+div#reproductor>div#controles button#forward:hover,
+div#reproductor>div#controles button#mute-unmute:hover,
+div#reproductor>div#controles button#fullscreen:hover,
+div#reproductor>div#controles>button#velocity-1:hover,
+div#reproductor>div#controles>button#velocity-15:hover,
+div#reproductor>div#controles>button#velocity-2:hover {
+    background-color: rgba(255, 255, 255, 0.616);
+}
+
+
+/* FIN DE REPRODUCTOR DE VIDEO */
+
+/* CABECERA DE CADA MAIN */
+main>h2 {
+    color: #000000;
+    padding: 1rem;
+    background-color: #E0DEDE;
+    border-bottom: solid 1px black;
+    width: 100%;
+    text-align: center;
+}
+
+/* FORMULARIO DE REGISTRO */
+
+form.registro {
+    display: flex;
+    flex-direction: row;
+    flex: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form.registro div#datos-cliente {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background-color: #E0DEDE;
+    flex: 100%;
+    font-size: 8pt;
+    padding: 1rem;
+}
+
+form.registro div#datos-cliente div {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 44%;
+    margin: .5rem;
+    align-items: center;
+}
+
+form.registro div#datos-cliente div.completo {
+    flex: 100%;
+}
+
+form.registro div#datos-cliente div.completo input[type="checkbox"] {
+    flex: 1% 0;
+}
+
+form.registro div#datos-cliente input {
+    width: 100%;
+}
+
+form.registro button {
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: .5rem;
+    margin: 1rem;
+    width: 50%;
+}
+
+form.registro button:hover {
+    color: red;
+    cursor: pointer;
+}
+
+/* FIN FORMULARIO REGISTRO */
+
+/* ARTICULO PLANES */
+
+main#planes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article.planes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+article.planes div.contenido-planes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+article.planes div.contenido-planes div.plan {
+    display: flex;
+    flex-direction: column;
+    flex: 3.125;
+    background-color: black;
+    color: white;
+    align-items: center;
+    border-radius: 19px;
+    margin-right: -5px;
+    height: 15rem;
+    font-size: 8pt;
+    max-height: 250px;
+
+}
+
+article.planes div.contenido-planes div.plan h3 {
+    padding: 1rem;
+}
+
+article.planes div.contenido-planes div.plan li {
+    padding-top: 1rem;
+}
+
+article.planes div.contenido-planes div.plan h3 {
+    color: red;
+}
+
+article.planes div.contenido-planes div.img-precio {
+    display: flex;
+    flex-direction: column;
+    flex: 3.25;
+    position: relative;
+}
+
+article.planes>div>div.img-precio>picture>img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+}
+
+article.planes div.contenido-planes div.img-precio span {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: red;
+}
+
+
+article.planes a {
+    text-decoration: none;
+    margin-top: .5rem;
+    flex: 25% 0;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: .3rem;
+    border: none;
+    text-align: center;
+}
+
+article.planes a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+/* FIN DE ARTICULO PLANES */
+
+/* DIV QUE CONTIENE EL PRODCUTO */
+div.productos img {
+    padding: 1rem 1rem 0 1rem;
+    max-width: 100px;
+    align-self: center;
+}
+
+div.productos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #E0DEDE;
+}
+
+div.productos h3 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 1rem;
+}
+
+div.productos div {
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+}
+
+div.productos div div:nth-child(2) {
+    margin-left: auto;
+}
+
+/* FIN DE DIV QUE CONTIENE EL PRODCUTO */
+
+/* DIV QUE CONTIENE LA INFORMACION DE LA TARJETA */
+
+.informacion-tarjeta {
+    display: flex;
+    flex-direction: column;
+    font-size: 7pt;
+    align-items: center;
+}
+
+.informacion-tarjeta div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: .3rem;
+}
+
+.informacion-tarjeta div.fondo-gris div {
+    flex: 100%;
+}
+
+.informacion-tarjeta div.fondo-gris div span {
+    flex: 50%;
+}
+
+.informacion-tarjeta div div span:nth-child(1) {
+    font-weight: bold;
+}
+
+.informacion-tarjeta p {
+    margin-top: .3rem;
+}
+
+.informacion-tarjeta img {
+    color: black
+}
+
+/* FIN DE DIV QUE CONTIENE LA INFORMACION DE LA TARJETA */
+
+/* DIV QUE CONTIENE LA DIRECCION DEL CLIENTE */
+
+.direccion-cliente {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: solid 1px black;
+}
+
+.direccion-cliente h2 {
+    padding: .5rem;
+    border-bottom: solid 1px black;
+}
+
+.direccion-cliente p {
+    padding: .5rem;
+    font-size: 9pt;
+    border-bottom: solid 1px black;
+}
+
+.direccion-cliente a {
+    align-self: center;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    width: 50%;
+    text-align: center;
+    padding: .2rem;
+    border-radius: 5px;
+    margin-top: .5rem;
+}
+
+/* FN DE DIV QUE CONTIENE LA DIRECCION DEL CLIENTE
+
+/* DIV QUE CONTIENE EL FORMULARIO PARA AÑADIR UNA TARJETA */
+
+div.formulario-tarjeta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    background-color: #E0DEDE;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    flex: 100%;
+}
+
+div.formulario-tarjeta * {
+    padding: 0.3rem;
+}
+
+div.formulario-tarjeta h3 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+div.formulario-tarjeta div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 47% 0;
+    margin: .3rem;
+}
+
+div.formulario-tarjeta div input {
+    width: 100%;
+}
+
+div.formulario-tarjeta div label {
+    font-size: 8pt;
+}
+
+/* FIN DE DIV QUE CONTIENE FORMUALRIO PARA AÑADIR UNA TARJETA*/
+
+
+@font-face {
+    font-family: 'Krona one';
+    src: url('../fonts/KronaOne-Regular.ttf');
+}
+
+.rojo {
+    color: red;
+}
+
+body {
+    font-family: 'Krona one';
+}
+
+/* HEADER */
+
+a:hover {
+    cursor: pointer;
+    color: red;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    min-width: 30px;
+}
+
+
+header {
+    display: flex;
+    background-color: black;
+    flex: 100%;
+
+}
+
+header>nav#menu-navegacion-escritorio {
+    display: none;
+}
+
+header>nav#menu-navegacion-movil {
+    display: flex;
+    flex: 100%;
+}
+
+header>nav#menu-navegacion-movil>ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-end;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+header>nav#menu-navegacion-movil>ul>li#logo-movil>a>img#img-logo-movil {
+    max-width: 200px;
+}
+
+header>nav#menu-navegacion-movil>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+header>nav#menu-desplegable {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 10;
+}
+
+header>nav#menu-desplegable div#imagen-fondo {
+    background-image: url("../Images/logo-pequeno.png");
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-repeat: repeat;
+    background-size: calc(100% / 3) calc(100% / 7);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+header>nav#menu-desplegable>ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+header>nav#menu-desplegable picture {
+    display: grid;
+}
+
+header>nav#menu-desplegable img {
+    width: 60px;
+}
+
+header>nav#menu-desplegable img:hover {
+    cursor: pointer;
+}
+
+header>nav#menu-desplegable>ul>li {
+    padding: 2rem;
+}
+
+header>nav#menu-desplegable>ul>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+
+@media (min-width:720px) {
+
+    header>nav#menu-navegacion-movil>ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+
+    header>nav#menu-navegacion-movil>ul>li#icono-hamburguesa {
+        margin-left: 1rem;
+    }
+
+    header>nav#menu-navegacion-movil>ul>li#carrito {
+        margin-right: 1rem;
+    }
+
+    header>nav#menu-navegacion-movil>ul>li#logo-movil {
+        order: 1;
+    }
+
+    header>nav#menu-navegacion-movil>ul>li#login {
+        order: 2;
+    }
+
+    header>nav#menu-navegacion-movil>ul>li#carrito {
+        order: 3;
+    }
+
+    header>nav#menu-navegacion-movil>ul>li#icono-hamburugesa {
+        order: 0;
+    }
+}
+
+@media (min-width:1200px) {
+
+    header>nav#menu-navegacion-movil {
+        display: none;
+    }
+
+    header>nav#menu-navegacion-escritorio {
+        display: flex;
+        flex-direction: row;
+        flex: 100%;
+    }
+
+    header>nav#menu-navegacion-escritorio>ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+        font-size: xx-large;
+        justify-content: space-between;
+        flex: 100%;
+        padding: 1rem;
+    }
+
+    header>nav#menu-navegacion-escritorio>ul>li>a {
+        text-decoration: none;
+        color: white;
+    }
+
+    header>nav#menu-navegacion-escritorio>ul>li#logo-escritorio>a>img {
+        margin-right: 5rem;
+        max-width: 200px;
+    }
+}
+
+/* FIN DE HEADER */
+
+
+/* INICIO DE INDEX */
+
+main nav#menu-index {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: aqua;
+    background: url("../Images/imagen_fondo_movil.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main nav#menu-index ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    height: 100%;
+    gap: 2rem;
+}
+
+main nav#menu-index ul li:nth-child(1) {
+    text-shadow: 1px 1px 2px rgb(255, 0, 0);
+}
+
+main nav#menu-index ul li:nth-child(2),
+main nav#menu-index ul li:nth-child(3) {
+    border-radius: 43px;
+    padding: 1rem;
+    background-color: white;
+    width: 11rem;
+    text-align: center;
+}
+
+
+main nav#menu-index ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* FIN DE INDEX */
+
+
+
+/* PLAN PREMIUM Y BASICO*/
+
+main#plan-premium-basico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main#plan-premium-basico img {
+    max-width: 200px;
+    padding: 1rem;
+}
+
+main#plan-premium-basico select#duracion-plan {
+    padding: .5rem;
+    width: 90%;
+    border: solid black 1px;
+    font-weight: bold;
+}
+
+main#plan-premium-basico span {
+    align-self: flex-start;
+    padding-left: 1.4rem;
+    padding-top: .3rem;
+}
+
+main#plan-premium-basico div#botones {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main#plan-premium-basico a {
+    padding: .5rem;
+    margin: 1rem;
+    width: 8rem;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+main#plan-premium-basico div#descripcion-plan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main#plan-premium-basico div#descripcion-plan h3 {
+    padding: 1rem;
+    background-color: #E0DEDE;
+}
+
+main#plan-premium-basico div#descripcion-plan span {
+    padding: 1rem;
+}
+
+main#plan-premium-basico a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+main#plan-premium-basico#botones a:first-child {
+    margin-right: auto;
+}
+
+/* FIN DE PLAN PREMIUM */
+
+/* PLAN CARRITO */
+
+main#carrito-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main#carrito-compra div#total-carrito {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: solid 1px black;
+    background-color: #E0DEDE;
+}
+
+main#carrito-compra div#total-carrito h3 {
+    align-self: center;
+    padding: .5rem;
+}
+
+main#carrito-compra div#total-carrito>div {
+    border-top: solid black 1px;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+main#carrito-compra div#total-carrito div div:nth-child(2) {
+    margin-left: auto;
+}
+
+main#carrito-compra div#descuento {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem;
+}
+
+main#carrito-compra div#descuento input {
+    width: 60%;
+    margin-left: 1rem;
+    padding: .3rem;
+}
+
+main#carrito-compra div#descuento a:nth-child(2) {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: red;
+    text-decoration: none;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+main#carrito-compra div#botones-carrito {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+main#carrito-compra div#botones-carrito a {
+    padding: .5rem;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    margin: 1rem;
+    border-radius: 9px;
+}
+
+main#carrito-compra div#botones-carrito a:nth-child(2) {
+    margin-left: auto;
+    text-align: center;
+    font-size: 9pt;
+    line-height: 9pt;
+}
+
+main#carrito-compra div#botones-carrito a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+/* FIN DE CARRITO */
+
+
+/* FINALIZAR COMPRA */
+
+main#finalizar-compra {
+    display: flex;
+    flex-direction: column;
+}
+
+main#finalizar-compra h2{
+    font-size: 11pt;
+}
+
+main#finalizar-compra div#links-inicio-registro {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 8pt;
+    gap: 1rem;
+    align-items: center;
+}
+
+main#finalizar-compra div.productos {
+    border-top: solid black 1px;
+    margin-top: 1rem;
+}
+
+/* FIN FINALIZAR COMPRA */
+
+
+/* INICIO CONFIRMACION DEL PEDIDO */
+
+main#confirmar-pedido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main#confirmar-pedido h2 {
+    font-size: 11pt;
+}
+
+main#confirmar-pedido div.productos {
+    margin-top: 1rem;
+}
+
+main#confirmar-pedido div.direccion-cliente {
+    margin-top: 3rem
+}
+
+main#confirmar-pedido div.informacion-tarjeta {
+    margin-top: 3rem
+}
+
+main#confirmar-pedido div#total-carrito {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    width: 100%;
+    background-color: #E0DEDE;
+}
+
+main#confirmar-pedido div#total-carrito h3 {
+    text-align: center;
+    padding: .3rem;
+    border-bottom: solid 1px black;
+}
+
+main#confirmar-pedido div#total-carrito div {
+    display: flex;
+    flex-direction: row;
+    flex: 100%;
+    padding: 1rem;
+}
+
+main#confirmar-pedido div#total-carrito div span:nth-child(2) {
+    margin-left: auto;
+}
+
+main#confirmar-pedido div#botones {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    flex: 100%;
+}
+
+
+main#confirmar-pedido div#botones a {
+    color: white;
+    background-color: black;
+    padding: .5rem;
+    flex: 40% 0;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+main#confirmar-pedido div#botones a:nth-child(2) {
+    margin-left: auto;
+    font-size: 7pt;
+}
+
+/* FIN CONFIRMACION DEL PEDIDO */
+
+
+/* INICIO DE LOGIN */
+
+main#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main#login div#formulario-login {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main#login div#formulario-login p {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 9pt;
+}
+
+main#login div#formulario-login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main#login div#formulario-login form div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+main#login div#formulario-login form div a {
+    margin-top: .3rem;
+    font-size: 9pt;
+}
+
+main#login div#formulario-login div input {
+    flex: 100%;
+}
+
+main#login div#formulario-login button {
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: .4rem;
+}
+
+main#login div#formulario-login button:hover {
+    color: red;
+    cursor: pointer;
+}
+
+/* FIN DE LOGIN */
+
+
+/* REGISTRO */
+
+main#registro {
+    display: flex;
+    flex-direction: column;
+}
+
+main#registro p {
+    font-size: 9pt;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* FIN REGISTRO */
+
+/* RECUPERAR CLAVE */
+
+main#recuperar-clave {
+    display: flex;
+    flex-direction: column;
+}
+
+main#recuperar-clave h2 {
+    font-size: 11pt;
+}
+
+main#recuperar-clave p {
+    margin-top: 1rem;
+    font-size: 9pt;
+    text-align: center;
+    padding: 1rem;
+}
+
+main#recuperar-clave div#formulario-recuperar-clave {
+    height: 100vh;
+}
+
+main#recuperar-clave div#formulario-recuperar-clave form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main#recuperar-clave div#formulario-recuperar-clave form div {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
+}
+
+main#recuperar-clave div#formulario-recuperar-clave form div label {
+    font-size: 9pt;
+}
+
+
+main#recuperar-clave div#formulario-recuperar-clave button {
+    padding: .5rem;
+    background-color: black;
+    border: none;
+    color: white;
+    width: 50%;
+    border-radius: 5px;
+}
+
+
+/* FIN DE RECUPERAR CLAVE */
+
+/* SOBRE MI */
+
+main#sobremi {
+    display: flex;
+    flex-direction: column;
+}
+
+main#sobremi div#premios {
+    flex-direction: column;
+}
+
+main#sobremi div#premios h3 {
+    padding: 1rem;
+    border-bottom: solid 1px black;
+}
+
+main#sobremi div#premios ul {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px black;
+}
+
+main#sobremi div#premios ul li {
+    margin: 1.5rem;
+    margin-left: 3rem;
+}
+
+main#sobremi p {
+    margin: 1rem;
+    text-align: center;
+}
+
+main#sobremi div#galeria-imagenes-clientes {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+main#sobremi div#galeria-imagenes-clientes h2 {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-bottom: solid 1px black;
+}
+
+main#sobremi div#galeria-imagenes-clientes div#contenido-galeria {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+main#sobremi div#galeria-imagenes-clientes div#contenido-galeria div#antes,
+main#sobremi div#galeria-imagenes-clientes div#contenido-galeria div#despues {
+    display: flex;
+    flex-direction: column;
+}
+
+main#sobremi div#galeria-imagenes-clientes div#contenido-galeria div#antes h3,
+main#sobremi div#galeria-imagenes-clientes div#contenido-galeria div#despues h3 {
+    margin-top: 1rem;
+}
+
+main#sobremi div#galeria-imagenes-clientes div#contenido-galeria img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+
+/* FIN SOBRE MI */
+
+/* MI CUENTA */
+
+
+
+main#mi-cuenta {
+    display: flex;
+    flex-direction: column;
+    font-size: 7pt;
+}
+
+
+
+
+
+main#mi-cuenta h3 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+main#mi-cuenta form {
+    display: flex;
+    flex-direction: column;
+}
+
+main#mi-cuenta form div#email,
+main#mi-cuenta form div#clave,
+main#mi-cuenta form div#otros-datos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+main#mi-cuenta form div#email div,
+main#mi-cuenta form div#clave div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+main#mi-cuenta form div#otros-datos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+main#mi-cuenta form div#otros-datos div {
+    display: flex;
+    flex-direction: column;
+    flex: 48% 0;
+    padding: 1rem;
+}
+
+main#mi-cuenta form div#otros-datos div input {
+    display: flex;
+    flex-direction: column;
+    flex: 50% 0;
+    width: 100%;
+}
+
+main#mi-cuenta form div#otros-datos div.completo {
+    flex: 100%;
+}
+
+main#mi-cuenta form button {
+    padding: .5rem;
+    background-color: black;
+    border: none;
+    color: white;
+    width: 50%;
+    border-radius: 5px;
+    align-self: center;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+main#mi-cuenta form button:hover {
+    color: red;
+    cursor: pointer;
+}
+
+/* FIN MI CUENTA */
+
+/* MIS PEDIDOS */
+
+main#mis-pedidos {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main#mis-pedidos article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+main#mis-pedidos div div {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border-bottom: solid 1px black;
+    font-size: 9pt;
+}
+
+main#mis-pedidos div div:nth-child(3),
+main#mis-pedidos div div:nth-child(4) {
+    display: none;
+}
+
+main#mis-pedidos div div:nth-child(1) {
+    border-top: solid 1px black;
+}
+
+main#mis-pedidos div span {
+    flex: 50%;
+}
+
+main#mis-pedidos div span:nth-child(2) {
+    text-align: end;
+}
+
+main#mis-pedidos article img {
+    max-width: 40px;
+    align-self: center;
+}
+
+
+/* FIN MIS PEDIDOS */
+
+/* METODOS DE PAGO */
+
+main#metodos-pago{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main#metodos-pago h2.desplegable span{
+    font-size: 11pt;
+}
+
+main#metodos-pago div.informacion-tarjeta{
+    margin-top: 2rem;
+}
+
+/* FIN METODOS DE PAGO */
+
+/* CONTACTO */
+
+main#contacto{
+    display: flex;
+    flex-direction: column;
+}
+
+main#contacto p{
+    margin-top: 2rem;
+    font-size: 6pt;
+    text-align: center;
+}
+
+main#contacto form{
+    margin-top: 1rem;
+    background-color: white;
+}
+
+
+main#contacto form div#datos-cliente{
+    background-color: white;
+    border: none;
+}
+
+main#contacto form div textarea{
+    resize: none;
+    width: 100%;
+}
+
+
+/* FIN CONTACTO */
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+}
+
+footer>div#social {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    width: 100%;
+    justify-content: center;
+    padding: .5rem;
+    border-bottom: solid 1px white;
+}
+
+
+footer>div#social img {
+    max-width: 40px;
+}
+
+footer>nav#social-links>ul {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    list-style: none;
+    gap: 1rem;
+    flex: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 5pt;
+}
+
+footer>nav#social-links>ul>li {
+    padding: .3rem;
+}
+
+footer>nav#social-links>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+footer>nav#social-links>ul>li#copy-text {
+    flex: 100%;
+    text-align: center;
+}
+
+/* FIN DE FOOTER */
