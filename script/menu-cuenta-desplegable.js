@@ -12,8 +12,8 @@ $(document).ready(function(){
     })
 
     $("div.transparente").on("click",function(){
-        $("nav.menu-mi-cuenta").slideDown()
-        $(" div.transparente").toggle()
+        $("nav.menu-mi-cuenta").slideUp()
+        $("div.transparente").toggle()
     })
     
 })
