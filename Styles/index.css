@@ -4,6 +4,18 @@
     padding: 0;
 }
 
+h2,h3, a , button{
+    font-family: 'Krona one', 'Raleway', sans-serif;
+}
+
+form, p, li, span{
+    font-family: 'Poppins', 'Montserrat', sans-serif ;
+}
+
+
+.rojo {
+    color: #FF1117;
+}
 
 .letra-pequeña {
     font-size: 4pt;
@@ -14,7 +26,7 @@
 }
 
 .fondo-gris {
-    background-color: #E0DEDE;
+    background-color: #FFFFFF;
     width: 100%;
 }
 
@@ -50,7 +62,7 @@ div.transparente {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #00000048;
+    background-color: #0A0A0A;
     z-index: 1;
     display: none;
 }
@@ -67,7 +79,7 @@ nav.menu-mi-cuenta {
 nav.menu-mi-cuenta ul {
     display: flex;
     flex-direction: column;
-    background-color: #E0DEDE;
+    background-color: #FFFFFF;
     list-style: none;
 }
 
@@ -76,7 +88,7 @@ nav.menu-mi-cuenta ul li {
 }
 
 nav.menu-mi-cuenta ul li a {
-    color: black;
+    color: #0A0A0A;
     text-decoration: none;
 }
 
@@ -86,7 +98,7 @@ nav.menu-mi-cuenta ul li a {
         display: flex;
         width: 100%;
         margin: 0 auto;
-        border-bottom: solid 1px #E0DEDE;
+        border-bottom: solid 1px #D7D7D8;
     }
 
     nav.menu-mi-cuenta ul {
@@ -94,7 +106,7 @@ nav.menu-mi-cuenta ul li a {
         flex-direction: row;
         flex: 50% 0;
         margin: 0 auto;
-        background-color: white;
+        background-color: #FFFFFF;
         justify-content: space-between;
     }
 
@@ -162,7 +174,7 @@ div#reproductor>div#controles>button#velocity-15,
 div#reproductor>div#controles>button#velocity-2,
 div#reproductor>div#controles>div#tiempo-actual,
 div#reproductor>div#controles>div#tiempo-total {
-    color: white;
+    color: #FFFFFF;
     background: transparent;
     border: transparent;
     border-radius: 3rem;
@@ -183,7 +195,7 @@ div#reproductor>div#controles button#backward>svg path,
 div#reproductor>div#controles button#forward>svg path,
 div#reproductor>div#controles button#mute-unmute>svg path,
 div#reproductor>div#controles button#fullscreen>svg path {
-    fill: red
+    fill: #FF1117
 }
 
 div#reproductor>div#controles button#play-pause:hover,
@@ -195,7 +207,7 @@ div#reproductor>div#controles button#fullscreen:hover,
 div#reproductor>div#controles>button#velocity-1:hover,
 div#reproductor>div#controles>button#velocity-15:hover,
 div#reproductor>div#controles>button#velocity-2:hover {
-    background-color: rgba(255, 255, 255, 0.616);
+    background-color: #D7D7D8
 }
 
 
@@ -203,10 +215,10 @@ div#reproductor>div#controles>button#velocity-2:hover {
 
 /* CABECERA DE CADA MAIN */
 main>h2 {
-    color: #000000;
+    color: #0A0A0A;
     padding: 1rem;
-    background-color: #E0DEDE;
-    border-bottom: solid 1px black;
+    background-color: #D7D7D8;
+    border-bottom: solid 1px #0A0A0A;
     width: 100%;
     text-align: center;
 }
@@ -225,9 +237,9 @@ form.registro div#datos-cliente {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    background-color: #E0DEDE;
+    border-bottom: 1px solid #0A0A0A;
+    border-top: 1px solid #0A0A0A;
+    background-color: #D7D7D8;
     flex: 100%;
     font-size: 8pt;
     padding: 1rem;
@@ -255,17 +267,17 @@ form.registro div#datos-cliente input {
 }
 
 form.registro button {
-    background-color: black;
+    background-color: #0A0A0A;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: #FFFFFF;
     padding: .5rem;
     margin: 1rem;
     width: 50%;
 }
 
 form.registro button:hover {
-    color: red;
+    color: #FF1117;
     cursor: pointer;
 }
 
@@ -292,8 +304,8 @@ article.planes div.plan {
     display: flex;
     flex-direction: column;
     flex: 50% 0;
-    background-color: black;
-    color: white;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
     align-items: center;
     border-radius: 19px;
     margin-right: -10px;
@@ -307,7 +319,7 @@ article.planes div.plan li {
 }
 
 article.planes div.plan h3 {
-    color: red;
+    color: #FF1117;
     padding: .4rem;
 }
 
@@ -334,7 +346,7 @@ article.planes div.img-precio span {
     position: absolute;
     bottom: 1rem;
     right: 5rem;
-    color: red;
+    color: #FF1117;
 }
 
 
@@ -342,8 +354,8 @@ article.planes a {
     text-decoration: none;
     margin-top: .5rem;
     flex: 50% 0;
-    background-color: black;
-    color: white;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
     border-radius: 5px;
     padding: .5rem;
     border: none;
@@ -351,7 +363,7 @@ article.planes a {
 }
 
 article.planes a:hover {
-    color: red;
+    color: #FF1117;
     cursor: pointer;
 }
 
@@ -359,7 +371,7 @@ main#planes section#faqs {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: #E0DEDE;
+    background-color: #D7D7D8;
     width: 100%;
     padding: 1rem;
     margin: 4rem 0;
@@ -418,7 +430,7 @@ main#planes section#faqs div dd {
         position: absolute;
         bottom: 0;
         right: 1rem;
-        color: red;
+        color: #FF1117;
     }
 
     main#planes article.planes div.img-precio {
@@ -485,12 +497,12 @@ div.productos div.fondo-gris {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: solid 1px black;
+    border: solid 1px #0A0A0A;
 }
 
 div.productos h3 {
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #0A0A0A;
     width: 100%;
     padding: 1rem;
 }
@@ -502,7 +514,7 @@ div.productos div.fondo-gris div {
 }
 
 div.productos div.fondo-gris > div:nth-child(1){
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #0A0A0A;
 }
 
 div.productos div.fondo-gris div div:nth-child(2) {
@@ -525,15 +537,28 @@ div.productos div.fondo-gris div div:nth-child(2) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: .3rem;
 }
 
-.informacion-tarjeta div.fondo-gris div {
-    flex: 100%;
+.informacion-tarjeta div.fondo-gris{
+    border:solid 1px #0A0A0A;
 }
 
-.informacion-tarjeta div.fondo-gris div span {
-    flex: 50%;
+.informacion-tarjeta div.fondo-gris div:nth-child(1){
+    border-bottom: solid 1px #0A0A0A;
+}
+
+.informacion-tarjeta div.fondo-gris > div {
+    flex: 100% 0;
+    padding: .5rem;
+}
+
+.informacion-tarjeta div.fondo-gris > div > span {
+    flex: 50% 0;
+    padding: .5rem;
+}
+
+.informacion-tarjeta div.fondo-gris > div > span:nth-child(2n){
+    text-align: end;
 }
 
 .informacion-tarjeta div div span:nth-child(1) {
@@ -545,7 +570,7 @@ div.productos div.fondo-gris div div:nth-child(2) {
 }
 
 .informacion-tarjeta img {
-    color: black
+    color: #0A0A0A
 }
 
 /* FIN DE DIV QUE CONTIENE LA INFORMACION DE LA TARJETA */
@@ -556,24 +581,24 @@ div.productos div.fondo-gris div div:nth-child(2) {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-top: solid 1px black;
+    border-top: solid 1px #0A0A0A;
 }
 
 .direccion-cliente h2 {
     padding: .5rem;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #0A0A0A;
 }
 
 .direccion-cliente p {
     padding: .5rem;
     font-size: 9pt;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #0A0A0A;
 }
 
 .direccion-cliente a {
     align-self: center;
-    color: white;
-    background-color: black;
+    color: #FFFFFF;
+    background-color: #0A0A0A;
     text-decoration: none;
     width: 50%;
     text-align: center;
@@ -591,9 +616,9 @@ div.formulario-tarjeta {
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 1rem;
-    background-color: #E0DEDE;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+    background-color: #D7D7D8;
+    border-top: solid 1px #0A0A0A;
+    border-bottom: solid 1px #0A0A0A;
     flex: 100% 0;
 }
 
@@ -603,7 +628,7 @@ div.formulario-tarjeta h3 {
 
 div.formulario-tarjeta h3 {
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #0A0A0A;
     flex: 100%;
 }
 
@@ -635,25 +660,11 @@ div.formulario-tarjeta div label {
 
 /* FIN DE DIV QUE CONTIENE FORMUALRIO PARA AÑADIR UNA TARJETA*/
 
-
-@font-face {
-    font-family: 'Krona one';
-    src: url('../fonts/KronaOne-Regular.ttf');
-}
-
-.rojo {
-    color: red;
-}
-
-body {
-    font-family: 'Krona one';
-}
-
-/* HEADER */
+/* INICIO DE HEADER */
 
 a:hover {
     cursor: pointer;
-    color: red;
+    color: #FF1117;
 }
 
 img {
@@ -665,7 +676,7 @@ img {
 
 header {
     display: flex;
-    background-color: black;
+    background-color: #0A0A0A;
     flex: 100%;
 
 }
@@ -694,15 +705,14 @@ header>nav#menu-navegacion-movil>ul>li#logo-movil>a>img#img-logo-movil {
 
 header>nav#menu-navegacion-movil>ul>li>a {
     text-decoration: none;
-    color: white;
+    color: #FFFFFF;
 }
 
 header>nav#menu-desplegable {
     display: none;
     position: fixed;
     width: 100%;
-    height: 100vh;
-    background-color: black;
+    background-color: #0A0A0A;
     z-index: 10;
 }
 
@@ -710,7 +720,6 @@ header>nav#menu-desplegable div#imagen-fondo {
     background-image: url("../Images/logo-pequeno.png");
     position: fixed;
     width: 100%;
-    height: 100vh;
     top: 0;
     left: 0;
     background-repeat: repeat;
@@ -742,7 +751,7 @@ header>nav#menu-desplegable>ul>li {
 }
 
 header>nav#menu-desplegable>ul>li>a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
@@ -808,7 +817,7 @@ header>nav#menu-desplegable>ul>li>a {
 
     header>nav#menu-navegacion-escritorio>ul>li>a {
         text-decoration: none;
-        color: white;
+        color: #FFFFFF;
     }
 
     header>nav#menu-navegacion-escritorio>ul>li#logo-escritorio>a>img {
@@ -849,7 +858,7 @@ main nav#menu-index ul li:nth-child(1) {
 main nav#menu-index ul li:nth-child(2),
 main nav#menu-index ul li:nth-child(3) {
     border-radius: 43px;
-    background-color: white;
+    background-color: #FFFFFF;
     width: 11rem;
     text-align: center;
 }
@@ -859,7 +868,7 @@ main nav#menu-index ul li a {
     display: block;
     width: 100%;
     text-decoration: none;
-    color: black;
+    color: #0A0A0A;
     padding: 1rem;
 }
 
@@ -902,7 +911,11 @@ main section#objetivos {
     justify-content: center;
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgb(77, 0, 10) 69%, rgb(63, 0, 8) 100%);
-    color: white;
+    color: #FFFFFF;
+}
+
+main section#objetivos h3 {
+    font-size: 11pt;
 }
 
 main section#objetivos div {
@@ -940,7 +953,6 @@ main#plan-premium-basico {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
 main#plan-premium-basico img {
@@ -951,7 +963,7 @@ main#plan-premium-basico img {
 main#plan-premium-basico select#duracion-plan {
     padding: .5rem;
     width: 90%;
-    border: solid black 1px;
+    border: solid #0A0A0A 1px;
     font-weight: bold;
 }
 
@@ -987,7 +999,7 @@ main#plan-premium-basico div#descripcion-plan {
 
 main#plan-premium-basico div#descripcion-plan h3 {
     padding: 1rem;
-    background-color: #E0DEDE;
+    background-color: #D7D7D8;
 }
 
 main#plan-premium-basico div#descripcion-plan span {
@@ -995,7 +1007,7 @@ main#plan-premium-basico div#descripcion-plan span {
 }
 
 main#plan-premium-basico a:hover {
-    color: red;
+    color: #FF1117;
     cursor: pointer;
 }
 
@@ -1011,7 +1023,6 @@ main#carrito-compra {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
 main#carrito-compra div#total-carrito {
@@ -1019,8 +1030,8 @@ main#carrito-compra div#total-carrito {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: solid 1px black;
-    background-color: #E0DEDE;
+    border: solid 1px #0A0A0A;
+    background-color: #D7D7D8;
 }
 
 main#carrito-compra div#total-carrito h3 {
@@ -1029,7 +1040,7 @@ main#carrito-compra div#total-carrito h3 {
 }
 
 main#carrito-compra div#total-carrito>div {
-    border-top: solid black 1px;
+    border-top: solid #0A0A0A 1px;
     display: flex;
     flex-direction: row;
     padding: 1rem;
@@ -1058,8 +1069,8 @@ main#carrito-compra div#descuento input {
 main#carrito-compra div#descuento a {
     margin-left: .4rem;
     text-decoration: none;
-    color: red;
-    background-color: black;
+    color: #FF1117;
+    background-color: #0A0A0A;
     padding: .5rem;
     border-radius: 7px;
 }
@@ -1074,8 +1085,8 @@ main#carrito-compra div#botones-carrito {
 main#carrito-compra div#botones-carrito a {
     padding: .5rem;
     text-decoration: none;
-    color: white;
-    background-color: black;
+    color: #FFFFFF;
+    background-color: #0A0A0A;
     margin: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1090,7 +1101,7 @@ main#carrito-compra div#botones-carrito a:nth-child(2) {
 }
 
 main#carrito-compra div#botones-carrito a:hover {
-    color: red;
+    color: #FF1117;
     cursor: pointer;
 }
 
@@ -1118,7 +1129,7 @@ main#finalizar-compra div#links-inicio-registro {
 }
 
 main#finalizar-compra div.productos {
-    border-top: solid black 1px;
+    border-top: solid #0A0A0A 1px;
     margin-top: 1rem;
 }
 
@@ -1155,16 +1166,16 @@ main#confirmar-pedido div#total-carrito {
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+    border-top: solid 1px #0A0A0A;
+    border-bottom: solid 1px #0A0A0A;
     width: 100%;
-    background-color: #E0DEDE;
+    background-color: #D7D7D8;
 }
 
 main#confirmar-pedido div#total-carrito h3 {
     text-align: center;
     padding: .3rem;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #0A0A0A;
 }
 
 main#confirmar-pedido div#total-carrito div {
@@ -1188,8 +1199,8 @@ main#confirmar-pedido div#botones {
 
 
 main#confirmar-pedido div#botones a {
-    color: white;
-    background-color: black;
+    color: #FFFFFF;
+    background-color: #0A0A0A;
     padding: .5rem;
     flex: 40% 0;
     text-align: center;
@@ -1251,14 +1262,14 @@ main#login div#formulario-login form div a {
 main#login div#formulario-login button {
     border: none;
     border-radius: 5px;
-    background-color: black;
-    color: white;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
     padding: .4rem;
     width: 50%;
 }
 
 main#login div#formulario-login button:hover {
-    color: red;
+    color: #FF1117;
     cursor: pointer;
 }
 
@@ -1299,9 +1310,6 @@ main#recuperar-clave p {
     padding: 1rem;
 }
 
-main#recuperar-clave div#formulario-recuperar-clave {
-    height: 100vh;
-}
 
 main#recuperar-clave div#formulario-recuperar-clave form {
     display: flex;
@@ -1323,9 +1331,9 @@ main#recuperar-clave div#formulario-recuperar-clave form div label {
 
 main#recuperar-clave div#formulario-recuperar-clave button {
     padding: .5rem;
-    background-color: black;
+    background-color: #0A0A0A;
     border: none;
-    color: white;
+    color: #FFFFFF;
     width: 50%;
     border-radius: 5px;
 }
@@ -1346,13 +1354,13 @@ main#sobremi div#premios {
 
 main#sobremi div#premios h3 {
     padding: 1rem;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #0A0A0A;
 }
 
 main#sobremi div#premios ul {
     display: flex;
     flex-direction: column;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #0A0A0A;
 }
 
 main#sobremi div#premios ul li {
@@ -1380,7 +1388,7 @@ main#sobremi div#galeria-imagenes-clientes div#contenido-galeria {
 main#sobremi div#galeria-imagenes-clientes h2 {
     padding: 1rem;
     margin-top: 1rem;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #0A0A0A;
 }
 
 main#sobremi div#galeria-imagenes-clientes div#contenido-galeria {
@@ -1417,7 +1425,6 @@ main#sobremi div#galeria-imagenes-clientes div#contenido-galeria > img {
 main#mi-cuenta {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 main#mi-cuenta h3 {
@@ -1476,9 +1483,9 @@ main#mi-cuenta form div#otros-datos div.completo {
 
 main#mi-cuenta form button {
     padding: .5rem;
-    background-color: black;
+    background-color: #0A0A0A;
     border: none;
-    color: white;
+    color: #FFFFFF;
     width: 50%;
     border-radius: 5px;
     align-self: center;
@@ -1487,7 +1494,7 @@ main#mi-cuenta form button {
 }
 
 main#mi-cuenta form button:hover {
-    color: red;
+    color: #FF1117;
     cursor: pointer;
 }
 
@@ -1498,7 +1505,6 @@ main#mi-cuenta form button:hover {
 main#mis-pedidos {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 main#mis-pedidos article {
@@ -1511,7 +1517,7 @@ main#mis-pedidos div div {
     display: flex;
     flex-direction: row;
     padding: 1rem;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #0A0A0A;
     font-size: 9pt;
 }
 
@@ -1521,7 +1527,7 @@ main#mis-pedidos div div:nth-child(4) {
 }
 
 main#mis-pedidos div div:nth-child(1) {
-    border-top: solid 1px black;
+    border-top: solid 1px #0A0A0A;
 }
 
 main#mis-pedidos div span {
@@ -1545,7 +1551,6 @@ main#mis-pedidos article img {
 main#metodos-pago {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 main#metodos-pago h2.desplegable span {
@@ -1573,12 +1578,12 @@ main#contacto p {
 
 main#contacto form {
     margin-top: 1rem;
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
 
 main#contacto form div#datos-cliente {
-    background-color: white;
+    background-color: #FFFFFF;
     border: none;
 }
 
@@ -1601,7 +1606,7 @@ main#cookies p, main#aviso-legal p, main#privacidad p{
 footer {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #0A0A0A;
     align-items: center;
 }
 
@@ -1612,7 +1617,7 @@ footer>div#social {
     width: 100%;
     justify-content: center;
     padding: .5rem;
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px #FFFFFF;
 }
 
 
@@ -1623,7 +1628,7 @@ footer>div#social img {
 footer>nav#social-links>ul {
     display: flex;
     flex-direction: row;
-    color: white;
+    color: #FFFFFF;
     list-style: none;
     gap: 1rem;
     flex: 100%;
@@ -1638,7 +1643,7 @@ footer>nav#social-links>ul>li {
 
 footer>nav#social-links>ul>li>a {
     text-decoration: none;
-    color: white;
+    color: #FFFFFF;
 }
 
 footer>nav#social-links>ul>li#copy-text {
