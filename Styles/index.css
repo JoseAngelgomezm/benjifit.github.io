@@ -15,6 +15,7 @@
 
 .fondo-gris {
     background-color: #E0DEDE;
+    width: 100%;
 }
 
 /* INICIO NAV MENU DESPLEGABLE EN MI CUENTA */
@@ -79,16 +80,16 @@ nav.menu-mi-cuenta ul li a {
     text-decoration: none;
 }
 
-@media(min-width:720px){
+@media(min-width:720px) {
 
-    nav.menu-mi-cuenta{
+    nav.menu-mi-cuenta {
         display: flex;
         width: 100%;
         margin: 0 auto;
         border-bottom: solid 1px #E0DEDE;
     }
 
-    nav.menu-mi-cuenta ul{
+    nav.menu-mi-cuenta ul {
         display: flex;
         flex-direction: row;
         flex: 50% 0;
@@ -97,10 +98,10 @@ nav.menu-mi-cuenta ul li a {
         justify-content: space-between;
     }
 
-    h2.desplegable img{
+    h2.desplegable img {
         display: none;
     }
- }
+}
 
 /* FIN NAV MENU DESPLEGABLE MI CUENTA */
 
@@ -250,6 +251,7 @@ form.registro div#datos-cliente div.completo input[type="checkbox"] {
 
 form.registro div#datos-cliente input {
     width: 100%;
+    padding: .3rem;
 }
 
 form.registro button {
@@ -279,61 +281,59 @@ main#planes {
 
 article.planes {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     padding: 1rem;
 }
 
-article.planes div.contenido-planes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-article.planes div.contenido-planes div.plan {
+article.planes div.plan {
     display: flex;
     flex-direction: column;
-    flex: 3.125;
+    flex: 50% 0;
     background-color: black;
     color: white;
     align-items: center;
     border-radius: 19px;
-    margin-right: -5px;
-    height: 15rem;
+    margin-right: -10px;
+    padding: 1rem;
     font-size: 8pt;
     max-height: 250px;
-
 }
 
-article.planes div.contenido-planes div.plan h3 {
-    padding: 1rem;
-}
-
-article.planes div.contenido-planes div.plan li {
+article.planes div.plan li {
     padding-top: 1rem;
 }
 
-article.planes div.contenido-planes div.plan h3 {
+article.planes div.plan h3 {
     color: red;
+    padding: .4rem;
 }
 
-article.planes div.contenido-planes div.img-precio {
+article.planes div.plan span {
+    display: none;
+}
+
+article.planes div.img-precio {
     display: flex;
     flex-direction: column;
-    flex: 3.25;
+    flex: 50% 0;
     position: relative;
 }
 
-article.planes>div>div.img-precio>picture>img {
+
+article.planes>div.img-precio>picture>picture,
+article.planes>div.img-precio>picture>img {
     width: 100%;
     height: auto;
-    max-width: 150px;
+    max-width: 180px;
 }
 
-article.planes div.contenido-planes div.img-precio span {
+article.planes div.img-precio span {
     position: absolute;
     bottom: 1rem;
-    right: 1rem;
+    right: 5rem;
     color: red;
 }
 
@@ -341,11 +341,11 @@ article.planes div.contenido-planes div.img-precio span {
 article.planes a {
     text-decoration: none;
     margin-top: .5rem;
-    flex: 25% 0;
+    flex: 50% 0;
     background-color: black;
     color: white;
     border-radius: 5px;
-    padding: .3rem;
+    padding: .5rem;
     border: none;
     text-align: center;
 }
@@ -355,64 +355,115 @@ article.planes a:hover {
     cursor: pointer;
 }
 
-@media(min-width:720px){
-    main#planes{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    main#planes h2{
-        flex: 100% 0;
-    }
-
-    main#planes article.planes{
-        flex: 50% 0;
-    }
-
-    main#planes article.planes div.contenido-planes{
-        flex-direction: column;
-        order: 2;
-    }
-
-    main#planes article.planes div.img-precio{
-        order: 1;
-    }
-
-    main#planes article.planes a{
-        order: 3;
-    }
-
-    
+main#planes section#faqs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #E0DEDE;
+    width: 100%;
+    padding: 1rem;
+    margin: 4rem 0;
 }
 
-@media(min-width:1200px){
-    main#planes{
+main#planes section#faqs h2 {
+    flex: 100% 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+main#planes section#faqs dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main#planes section#faqs div {
+    display: flex;
+    flex-direction: column;
+    flex: 50% 0;
+    padding: 1rem;
+}
+
+main#planes section#faqs div dt,
+main#planes section#faqs div dd {
+    text-align: center;
+}
+
+
+
+@media(min-width:720px) {
+    main#planes {
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    main#planes h2{
+    main#planes h2 {
         flex: 100% 0;
     }
 
-    main#planes article.planes{
+    main#planes article.planes {
+        flex-direction: column;
         flex: 50% 0;
     }
 
-    main#planes article.planes div.contenido-planes{
+    article.planes div.plan {
+        position: relative;
+        padding: 2rem;
+        order: 2;
+        width: 70%;
+    }
+
+    article.planes div.plan span {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 1rem;
+        color: red;
+    }
+
+    main#planes article.planes div.img-precio {
+        order: 1;
+    }
+
+    main#planes article.planes div.img-precio span {
+        display: none;
+    }
+
+    main#planes article.planes a {
+        order: 3;
+    }
+
+
+}
+
+@media(min-width:1200px) {
+    main#planes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main#planes h2 {
+        flex: 100% 0;
+    }
+
+    main#planes article.planes {
+        flex: 50% 0;
+    }
+
+    main#planes article.planes div.contenido-planes {
         flex-direction: column;
         order: 2;
     }
 
-    main#planes article.planes div.img-precio{
+    main#planes article.planes div.img-precio {
         order: 1;
     }
 
-    main#planes article.planes a{
+    main#planes article.planes a {
         order: 3;
     }
 
-    
+
 }
 
 /* FIN DE INICIO DE VER PLANES */
@@ -434,6 +485,7 @@ div.productos div.fondo-gris {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border: solid 1px black;
 }
 
 div.productos h3 {
@@ -449,6 +501,10 @@ div.productos div.fondo-gris div {
     padding: .5rem;
 }
 
+div.productos div.fondo-gris > div:nth-child(1){
+    border-bottom: solid 1px black;
+}
+
 div.productos div.fondo-gris div div:nth-child(2) {
     margin-left: auto;
 }
@@ -462,6 +518,7 @@ div.productos div.fondo-gris div div:nth-child(2) {
     flex-direction: column;
     font-size: 7pt;
     align-items: center;
+    flex: 100% 0;
 }
 
 .informacion-tarjeta div {
@@ -537,7 +594,7 @@ div.formulario-tarjeta {
     background-color: #E0DEDE;
     border-top: solid 1px black;
     border-bottom: solid 1px black;
-    flex: 100%;
+    flex: 100% 0;
 }
 
 div.formulario-tarjeta h3 {
@@ -558,12 +615,18 @@ div.formulario-tarjeta div {
     flex: 47%;
 }
 
+div.formulario-tarjeta span:nth-child(2) {
+    text-align: end;
+}
+
+
 div.formulario-tarjeta div.completo {
     flex: 100%;
 }
 
 div.formulario-tarjeta div input {
     width: 100%;
+    padding: .3rem;
 }
 
 div.formulario-tarjeta div label {
@@ -800,10 +863,69 @@ main nav#menu-index ul li a {
     padding: 1rem;
 }
 
-@media(min-width:720px){
-    main nav#menu-index{
+
+main section#introduccion {
+    display: flex;
+    flex-direction: row;
+    margin: 4rem 0;
+
+}
+
+main section#introduccion div {
+    padding: 2rem;
+}
+
+main section#introduccion div#texto-introduccion {
+    flex: 60% 0;
+
+}
+
+main section#introduccion div#imagen-introduccion {
+    flex: 40% 0;
+}
+
+main section#introduccion div picture,
+main section#introduccion div picture img {
+    width: 100%;
+    height: auto;
+}
+
+main section#objetivos {
+    display: flex;
+    padding: 4rem;
+    margin-top: 4rem;
+}
+
+main section#objetivos {
+    display: flex;
+    flex: 100%;
+    justify-content: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgb(77, 0, 10) 69%, rgb(63, 0, 8) 100%);
+    color: white;
+}
+
+main section#objetivos div {
+    display: flex;
+    flex-direction: column;
+    flex: 80% 0;
+    align-items: center;
+}
+
+main section#objetivos div ul {
+    padding: 1rem;
+    align-self: self-start;
+}
+
+main section#objetivos div ul li {
+    padding: 1rem;
+}
+
+
+@media(min-width:720px) {
+    main nav#menu-index {
         background: url("../Images/imagen_fondo_tablet.webp");
-        background-repeat:no-repeat;
+        background-repeat: no-repeat;
         background-size: cover;
     }
 }
@@ -812,12 +934,13 @@ main nav#menu-index ul li a {
 
 
 
-/* INICIO PLAN PREMIUM Y BASICO*/
+/* INICIO DE PLAN PREMIUM Y BASICO*/
 
 main#plan-premium-basico {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 
 main#plan-premium-basico img {
@@ -833,20 +956,20 @@ main#plan-premium-basico select#duracion-plan {
 }
 
 main#plan-premium-basico span {
-    align-self: flex-start;
-    padding-left: 1.4rem;
-    padding-top: .3rem;
+    width: 90%;
+    margin-top: .5rem;
 }
 
 main#plan-premium-basico div#botones {
     display: flex;
+    flex-direction: row;
+    width: 90%;
     justify-content: space-between;
-    width: 100%;
 }
 
 main#plan-premium-basico a {
     padding: .5rem;
-    margin: 1rem;
+    margin-top: 2rem;
     width: 8rem;
     text-align: center;
     background-color: #000000;
@@ -857,6 +980,7 @@ main#plan-premium-basico a {
 
 main#plan-premium-basico div#descripcion-plan {
     display: flex;
+    margin-top: 4rem ;
     flex-direction: column;
     width: 100%;
 }
@@ -881,12 +1005,13 @@ main#plan-premium-basico#botones a:first-child {
 
 /* FIN DE PLAN BASICO Y PREMIUM */
 
-/* INICIO CARRITO */
+/* INICIO DE CARRITO */
 
 main#carrito-compra {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 
 main#carrito-compra div#total-carrito {
@@ -919,24 +1044,26 @@ main#carrito-compra div#descuento {
     flex-direction: row;
     width: 100%;
     padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 main#carrito-compra div#descuento input {
-    width: 60%;
+    width: 70%;
     margin-left: 1rem;
-    padding: .3rem;
+    padding: .5rem;
 }
 
-main#carrito-compra div#descuento a:nth-child(2) {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: black;
-    color: red;
+main#carrito-compra div#descuento a {
+    margin-left: .4rem;
     text-decoration: none;
-    text-align: center;
+    color: red;
+    background-color: black;
     padding: .5rem;
-    border-radius: 5px;
+    border-radius: 7px;
 }
+
 
 main#carrito-compra div#botones-carrito {
     display: flex;
@@ -949,7 +1076,9 @@ main#carrito-compra div#botones-carrito a {
     text-decoration: none;
     color: white;
     background-color: black;
-    margin: 1rem;
+    margin: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     border-radius: 9px;
 }
 
@@ -1017,8 +1146,10 @@ main#confirmar-pedido div.direccion-cliente {
 }
 
 main#confirmar-pedido div.informacion-tarjeta {
-    margin-top: 3rem
+    margin-top: 3rem;
+    width: 100%;
 }
+
 
 main#confirmar-pedido div#total-carrito {
     display: flex;
@@ -1108,12 +1239,14 @@ main#login div#formulario-login form div {
     width: 100%;
 }
 
+main#login div#formulario-login form div input {
+    padding: .3rem;
+}
+
 main#login div#formulario-login form div a {
     margin-top: .3rem;
     font-size: 9pt;
 }
-
-
 
 main#login div#formulario-login button {
     border: none;
@@ -1238,6 +1371,12 @@ main#sobremi div#galeria-imagenes-clientes {
     margin-bottom: 2rem;
 }
 
+main#sobremi div#galeria-imagenes-clientes div#contenido-galeria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 main#sobremi div#galeria-imagenes-clientes h2 {
     padding: 1rem;
     margin-top: 1rem;
@@ -1259,22 +1398,26 @@ main#sobremi div#galeria-imagenes-clientes div#contenido-galeria div#despues {
 main#sobremi div#galeria-imagenes-clientes div#contenido-galeria div#antes h3,
 main#sobremi div#galeria-imagenes-clientes div#contenido-galeria div#despues h3 {
     margin-top: 1rem;
+    text-align: center;
+    padding: 1rem;
 }
 
-main#sobremi div#galeria-imagenes-clientes div#contenido-galeria img {
+main#sobremi div#galeria-imagenes-clientes div#contenido-galeria > img {
     width: 100%;
     height: auto;
     margin-top: 1rem;
+    max-width: 100px;
 }
 
 
 /* FIN SOBRE MI */
 
-/* INICIO MI CUENTA */
+/* INICIO DE MI CUENTA */
 
 main#mi-cuenta {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 main#mi-cuenta h3 {
@@ -1285,6 +1428,10 @@ main#mi-cuenta h3 {
 main#mi-cuenta form {
     display: flex;
     flex-direction: column;
+}
+
+main#mi-cuenta form input{
+    padding: .3rem;
 }
 
 main#mi-cuenta form div#email,
@@ -1442,6 +1589,12 @@ main#contacto form div textarea {
 
 
 /* FIN CONTACTO */
+
+/* cookies, privacidad y aviso legal */
+
+main#cookies p, main#aviso-legal p, main#privacidad p{
+    padding: 3rem;
+}
 
 /* FOOTER */
 
