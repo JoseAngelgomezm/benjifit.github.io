@@ -10,28 +10,28 @@
     <link rel="stylesheet" href="Styles/index.css">
 
     <!-- Fuente krona one -->
-    <link rel="preload" href="https://fonts.googleapis.com">
-    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com" as="font">
+    <link rel="preload" href="https://fonts.gstatic.com" as="font" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet" as="font">
 
     <!-- Fuente Raleway -->
-    <link rel="preload" href="https://fonts.googleapis.com">
-    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com" as="font">
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin as="font">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" as="font">
 
     <!-- Fuente poppins -->
-    <link rel="preload" href="https://fonts.googleapis.com">
-    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com" as="font">
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin as="font">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" as="font">
 
     <!-- Fuente Montserrat -->
-    <link rel="preload" href="https://fonts.googleapis.com">
-    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com" as="font">
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin as="font">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" as="font">
 
     <script src="jq/jquery-3.7.1.js"></script>
     <script src="script/eventosRaton.js"></script>
@@ -42,36 +42,69 @@
     <header>
         <nav id="menu-navegacion-movil">
             <ul>
-                <li id="logo-movil"><a href="index.html"><img id="img-logo-movil" src="Images/logo_png.png"
-                            alt="iamgen del logo de benjifit"></a></li>
-                <li id="login"><a href="links/login.html"><img src="Icons/Login.svg" alt="icono para inicar sesion"></a>
+                <li id="logo-movil">
+                    <a href="index.html">
+                        <picture>
+                            <img id="img-logo-movil" src="Images/logo_png.png" alt="iamgen del logo de benjifit">
+                        </picture>
+                    </a>
                 </li>
-                <li id="carrito"><a href="links/carrito.html"><img src="Icons/Carrito.svg"
-                            alt="icono que te lleva al carrito"></a></li>
-                <li id="icono-hamburguesa"><img id="hamburguesa" src="Icons/Hamburguesa.svg"
-                        alt="icono que despliega el menu de navegacion"></li>
+                <li id="login">
+                    <a href="links/login.html">
+                        <picture>
+                            <img src="Icons/Login.svg" alt="icono para inicar sesion">
+                        </picture>
+                    </a>
+                </li>
+                <li id="carrito">
+                    <a href="links/carrito.html">
+                        <picture>
+                            <img src="Icons/Carrito.svg" alt="icono que te lleva al carrito">
+                        </picture>
+                    </a>
+                </li>
+                <li id="icono-hamburguesa">
+                    <picture>
+                        <img id="hamburguesa" src="Icons/Hamburguesa.svg"
+                            alt="icono que despliega el menu de navegacion">
+                    </picture>
+                </li>
             </ul>
         </nav>
 
         <nav id="menu-navegacion-escritorio">
             <ul>
-                <li id="logo-escritorio"><a href="index.html"><img src="Images/logo_png.png"
-                            alt="iamgen del logo de benjifit"></a></li>
-                <li><a href="links/inicio.html">Inicio</a></li>
+                <li id="logo-escritorio">
+                    <a href="index.html">
+                        <picture>
+                            <img src="Images/logo_png.png" alt="imagen del logo de benjifit">
+                        </picture>
+                    </a>
+                </li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="links/planes.html">Planes</a></li>
                 <li><a href="links/sobremi.html">Sobre mí</a></li>
                 <li><a href="links/contacto.html">Contacto</a></li>
-                <li id="login-escritorio"><a href="links/login.html"><img src="Icons/Login.svg"
-                            alt="icono para inicar sesion"></a>
+                <li id="login-escritorio">
+                    <a href="links/login.html">
+                        <picture>
+                            <img src="Icons/Login.svg" alt="icono para inicar sesion">
+                        </picture>
+                    </a>
                 </li>
-                <li id="carrito-escritorio"><a href="links/carrito.html"><img src="Icons/Carrito.svg"
-                            alt="icono que te lleva al carrito"></a></li>
+                <li id="carrito-escritorio">
+                    <a href="carrito.html">
+                        <picture>
+                            <img src="Icons/Carrito.svg" alt="icono que te lleva al carrito">
+                        </picture>
+                    </a>
+                </li>
             </ul>
         </nav>
 
         <nav id="menu-desplegable">
             <ul>
-                <li><a href="links/inicio.html">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="links/planes.html">Planes</a></li>
                 <li><a href="links/sobremi.html">Sobre mí</a></li>
                 <li><a href="links/login.html">Mi cuenta</a></li>
@@ -87,7 +120,6 @@
 
     <main>
         <nav id="menu-index">
-
             <ul>
                 <li>
                     <h2>Únete a mi equipo</h2>
@@ -123,10 +155,10 @@
 
     <footer>
         <div id="social">
-            <a href="https://www.instagram.com/benji.ep/" target="_blank"><img src="Icons/Instagram.svg"
-                    alt="icono con enlace al canal de benjifit de instagram"></a>
-            <a href="" target="_blank"><img src="Icons/Youtube.svg"
-                    alt="icono con enlace al canal de benjifit de youtube"></a>
+            <a href="https://www.instagram.com/benji.ep/" target="_blank"><picture><img src="Icons/Instagram.svg"
+                alt="icono con enlace al canal de benjifit de instagram"></picture></a>
+            <a href="" target="_blank"><picture><img src="Icons/Youtube.svg"
+                alt="icono con enlace al canal de benjifit de youtube"></picture></a>
         </div>
 
         <nav id="social-links">

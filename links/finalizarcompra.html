@@ -19,30 +19,63 @@
     <header>
         <nav id="menu-navegacion-movil">
             <ul>
-                <li id="logo-movil"><a href="../index.html"><img id="img-logo-movil" src="../Images/logo_png.png"
-                            alt="iamgen del logo de benjifit"></a></li>
-                <li id="login"><a href="login.html"><img src="../Icons/Login.svg" alt="icono para inicar sesion"></a>
+                <li id="logo-movil">
+                    <a href="../index.html">
+                        <picture>
+                            <img id="img-logo-movil" src="../Images/logo_png.png" alt="iamgen del logo de benjifit">
+                        </picture>
+                    </a>
                 </li>
-                <li id="carrito"><a href="carrito.html"><img src="../Icons/Carrito.svg"
-                            alt="icono que te lleva al carrito"></a></li>
-                <li id="icono-hamburguesa"><img id="hamburguesa" src="../Icons/Hamburguesa.svg"
-                        alt="icono que despliega el menu de navegacion"></li>
+                <li id="login">
+                    <a href="login.html">
+                        <picture>
+                            <img src="../Icons/Login.svg" alt="icono para inicar sesion">
+                        </picture>
+                    </a>
+                </li>
+                <li id="carrito">
+                    <a href="carrito.html">
+                        <picture>
+                            <img src="../Icons/Carrito.svg" alt="icono que te lleva al carrito">
+                        </picture>
+                    </a>
+                </li>
+                <li id="icono-hamburguesa">
+                    <picture>
+                        <img id="hamburguesa" src="../Icons/Hamburguesa.svg"
+                            alt="icono que despliega el menu de navegacion">
+                    </picture>
+                </li>
             </ul>
         </nav>
 
         <nav id="menu-navegacion-escritorio">
             <ul>
-                <li id="logo-escritorio"><a href="index.html"><img src="../Images/logo_png.png"
-                            alt="imagen del logo de benjifit"></a></li>
-                <li><a href="inicio.html">Inicio</a></li>
+                <li id="logo-escritorio">
+                    <a href="../index.html">
+                        <picture>
+                            <img src="../Images/logo_png.png" alt="imagen del logo de benjifit">
+                        </picture>
+                    </a>
+                </li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="planes.html">Planes</a></li>
                 <li><a href="sobremi.html">Sobre mí</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li id="login-escritorio"><a href="login.html"><img src="../Icons/Login.svg"
-                            alt="icono para inicar sesion"></a>
+                <li id="login-escritorio">
+                    <a href="login.html">
+                        <picture>
+                            <img src="../Icons/Login.svg" alt="icono para inicar sesion">
+                        </picture>
+                    </a>
                 </li>
-                <li id="carrito-escritorio"><a href="carrito.html"><img src="../Icons/Carrito.svg"
-                            alt="icono que te lleva al carrito"></a></li>
+                <li id="carrito-escritorio">
+                    <a href="carrito.html">
+                        <picture>
+                            <img src="../Icons/Carrito.svg" alt="icono que te lleva al carrito">
+                        </picture>
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -57,7 +90,7 @@
             <div id="imagen-fondo">
             </div>
             <picture>
-                <img src="../Icons/Cerrar.svg" alt="">
+                <img src="../Icons/Cerrar.svg" alt="icono para cerrar el menu">
             </picture>
         </nav>
     </header>
@@ -72,72 +105,72 @@
             <div id="datos-cliente">
                 <div>
                     <label for="nombre">Nombre:</label><span class="rojo">*</span>
-                    <input type="text" name="nombre" id="nombre">
+                    <input type="text" name="nombre" id="nombre" aria-label="introduce tu nombre">
                 </div>
 
                 <div>
                     <label for="apellidos">Apellidos:</label><span class="rojo">*</span>
-                    <input type="text" name="apellidos" id="apellidos">
+                    <input type="text" name="apellidos" id="apellidos" aria-label="introduce tus apellidos">
                 </div>
 
                 <div class="completo">
                     <label for="empresa">Empresa:</label>
-                    <input type="text" name="empresa" id="empresa">
+                    <input type="text" name="empresa" id="empresa" aria-label="introduce la empresa a la que perteneces">
                 </div>
 
 
                 <div>
                     <label for="poblacion">Poblacion: <span class="rojo">*</span></label>
-                    <input type="text" name="poblacion" id="poblacion">
+                    <input type="text" name="poblacion" id="poblacion" aria-label="introduce tu poblacion">
                 </div>
 
                 <div>
                     <label for="codigopostal">Código Postal: <span class="rojo">*</span></label>
-                    <input type="number" maxlength="5" name="codigopostal" id="codigopostal">
+                    <input type="number" name="codigopostal" id="codigopostal" aria-label="introduce tu codigo postal">
                 </div>
 
                 <div>
                     <label for="provincia">Provincia: <span class="rojo">*</span></label>
-                    <input type="text" name="provincia" id="provincia">
+                    <input type="text" name="provincia" id="provincia" aria-label="introduce tu provincia">
                 </div>
 
                 <div>
                     <label for="pais-region">País/Región: <span class="rojo">*</span></label>
-                    <input type="text" name="pais-region" id="pais-region">
+                    <input type="text" name="pais-region" id="pais-region"  aria-label="introduce tu pais">
                 </div>
 
                 <div>
                     <label for="telefono-movil">Teléfono-móvil: <span class="rojo">*</span></label>
-                    <input type="number" maxlength="9" name="telefono-movil" id="telefono-movil">
+                    <input type="number" name="telefono-movil" id="telefono-movil" aria-label="introduce tu telfono movil">
                 </div>
 
                 <div>
                     <label for="telefono-fijo">Telefono-fijo</label>
-                    <input type="text" maxlength="9" name="telefono-fijo" id="telefono-fijo">
+                    <input type="text" maxlength="9" name="telefono-fijo" id="telefono-fijo" aria-label="introduce tu telfono fijo">
                 </div>
 
                 <div class="completo">
                     <label for="correo-electronico">Correo electónico: <span class="rojo">*</span></label>
-                    <input type="email" name="correo-electronico" id="correo-electronico">
+                    <input type="email" name="correo-electronico" id="correo-electronico" aria-label="introduce tu email">
                 </div>
 
                 <div class="completo">
                     <label for="confirmar-correo-electronico">Confirmar correo: <span class="rojo">*</span></label>
-                    <input type="email" name="confirmar-correo-electronico" id="confirmar-correo-electronico">
+                    <input type="email" name="confirmar-correo-electronico" id="confirmar-correo-electronico" aria-label="introduce tu email para confirmar">
                 </div>
 
                 <div class="completo">
-                    <input type="checkbox" name="crear-cuenta" id="crear-cuenta">
+                    <input type="checkbox" name="crear-cuenta" id="crear-cuenta" aria-label="selecciona si quieres crear una cuenta con estos datos">
                     <label for="crear-cuenta">¿Crear una cuenta?</label>
                 </div>
 
                 <div>
                     <label for="informacion-adicional">Información adicional:</label>
-                    <input type="text" name="informacion-adicional" id="informacion-adicional">
+                    <input type="text" name="informacion-adicional" id="informacion-adicional" aria-label="introduce informacion adicional">
                 </div>
 
                 <div class="completo">
-                    <input type="checkbox" name="politica-privacidad" id="politica-privacidad">
+                    <input type="checkbox" name="politica-privacidad" id="politica-privacidad" aria-label="seleciona si aceptas la politica de privacidad">
                     <label class="letra-pequeña" for="politica-privacidad">Acepto las condiciones de uso, poítica de
                         privacidad y aviso legal.</label>
                 </div>

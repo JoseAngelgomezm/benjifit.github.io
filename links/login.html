@@ -13,36 +13,70 @@
 
     <script src="../jq/jquery-3.7.1.js"></script>
     <script src="../script/eventosRaton.js"></script>
+    <script src="../script/controlformulario.js"></script>
 </head>
 
 <body>
     <header>
         <nav id="menu-navegacion-movil">
             <ul>
-                <li id="logo-movil"><a href="../index.html"><img id="img-logo-movil" src="../Images/logo_png.png"
-                            alt="iamgen del logo de benjifit"></a></li>
-                <li id="login"><a href="login.html"><img src="../Icons/Login.svg" alt="icono para inicar sesion"></a>
+                <li id="logo-movil">
+                    <a href="../index.html">
+                        <picture>
+                            <img id="img-logo-movil" src="../Images/logo_png.png" alt="iamgen del logo de benjifit">
+                        </picture>
+                    </a>
                 </li>
-                <li id="carrito"><a href="carrito.html"><img src="../Icons/Carrito.svg"
-                            alt="icono que te lleva al carrito"></a></li>
-                <li id="icono-hamburguesa"><img id="hamburguesa" src="../Icons/Hamburguesa.svg"
-                        alt="icono que despliega el menu de navegacion"></li>
+                <li id="login">
+                    <a href="login.html">
+                        <picture>
+                            <img src="../Icons/Login.svg" alt="icono para inicar sesion">
+                        </picture>
+                    </a>
+                </li>
+                <li id="carrito">
+                    <a href="carrito.html">
+                        <picture>
+                            <img src="../Icons/Carrito.svg" alt="icono que te lleva al carrito">
+                        </picture>
+                    </a>
+                </li>
+                <li id="icono-hamburguesa">
+                    <picture>
+                        <img id="hamburguesa" src="../Icons/Hamburguesa.svg"
+                            alt="icono que despliega el menu de navegacion">
+                    </picture>
+                </li>
             </ul>
         </nav>
 
         <nav id="menu-navegacion-escritorio">
             <ul>
-                <li id="logo-escritorio"><a href="index.html"><img src="../Images/logo_png.png"
-                            alt="imagen del logo de benjifit"></a></li>
-                <li><a href="inicio.html">Inicio</a></li>
+                <li id="logo-escritorio">
+                    <a href="../index.html">
+                        <picture>
+                            <img src="../Images/logo_png.png" alt="imagen del logo de benjifit">
+                        </picture>
+                    </a>
+                </li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="planes.html">Planes</a></li>
                 <li><a href="sobremi.html">Sobre mí</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li id="login-escritorio"><a href="login.html"><img src="../Icons/Login.svg"
-                            alt="icono para inicar sesion"></a>
+                <li id="login-escritorio">
+                    <a href="login.html">
+                        <picture>
+                            <img src="../Icons/Login.svg" alt="icono para inicar sesion">
+                        </picture>
+                    </a>
                 </li>
-                <li id="carrito-escritorio"><a href="carrito.html"><img src="../Icons/Carrito.svg"
-                            alt="icono que te lleva al carrito"></a></li>
+                <li id="carrito-escritorio">
+                    <a href="carrito.html">
+                        <picture>
+                            <img src="../Icons/Carrito.svg" alt="icono que te lleva al carrito">
+                        </picture>
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -57,12 +91,12 @@
             <div id="imagen-fondo">
             </div>
             <picture>
-                <img src="../Icons/Cerrar.svg" alt="">
+                <img src="../Icons/Cerrar.svg" alt="icono para cerrar el menu">
             </picture>
         </nav>
     </header>
 
-    <main id="login">
+    <main id="main-login">
         <h2>Iniciar sesión</h2>
         <div id="formulario-login">
             <p>Si no tienes una cuenta <a href="registro.html" class="rojo">Regístrate</a></p>
@@ -70,12 +104,14 @@
             <form action="mi-cuenta.html">
                 <div>
                     <label for="correo">Correo electrónico: <span class="rojo">*</span></label>
-                    <input type="text" name="correo" id="correo">
+                    <input class="requerido" required type="email" name="correo" id="correo" aria-label="introduce tu email">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="contraseña">Contraseña: <span class="rojo">*</span></label>
-                    <input type="password" name="contraseña" id="contraseña">
+                    <input class="requerido" required type="password" name="contraseña" id="contraseña" aria-label="introduce tu contraseña">
+                    <span class="error">Este campo es obligatorio</span>
                     <a class="rojo" href=recuperarclave.html>¿Has olvidado la contraseña?</a>
                 </div>
                 <button type="submit" name="entrar">ENTRAR</button>

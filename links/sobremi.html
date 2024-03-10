@@ -10,40 +10,75 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=PT+Sans&family=Raleway&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/jquery.bxslider.css">
 
     <script src="../jq/jquery-3.7.1.js"></script>
     <script src="../script/eventosRaton.js"></script>
     <script src="../script/video.js"></script>
+    <script src="../script/jquery.bxslider.js"></script>
 </head>
 
 <body>
     <header>
         <nav id="menu-navegacion-movil">
             <ul>
-                <li id="logo-movil"><a href="../index.html"><img id="img-logo-movil" src="../Images/logo_png.png"
-                            alt="iamgen del logo de benjifit"></a></li>
-                <li id="login"><a href="login.html"><img src="../Icons/Login.svg" alt="icono para inicar sesion"></a>
+                <li id="logo-movil">
+                    <a href="../index.html">
+                        <picture>
+                            <img id="img-logo-movil" src="../Images/logo_png.png" alt="iamgen del logo de benjifit">
+                        </picture>
+                    </a>
                 </li>
-                <li id="carrito"><a href="carrito.html"><img src="../Icons/Carrito.svg"
-                            alt="icono que te lleva al carrito"></a></li>
-                <li id="icono-hamburguesa"><img id="hamburguesa" src="../Icons/Hamburguesa.svg"
-                        alt="icono que despliega el menu de navegacion"></li>
+                <li id="login">
+                    <a href="login.html">
+                        <picture>
+                            <img src="../Icons/Login.svg" alt="icono para inicar sesion">
+                        </picture>
+                    </a>
+                </li>
+                <li id="carrito">
+                    <a href="carrito.html">
+                        <picture>
+                            <img src="../Icons/Carrito.svg" alt="icono que te lleva al carrito">
+                        </picture>
+                    </a>
+                </li>
+                <li id="icono-hamburguesa">
+                    <picture>
+                        <img id="hamburguesa" src="../Icons/Hamburguesa.svg"
+                            alt="icono que despliega el menu de navegacion">
+                    </picture>
+                </li>
             </ul>
         </nav>
 
         <nav id="menu-navegacion-escritorio">
             <ul>
-                <li id="logo-escritorio"><a href="index.html"><img src="../Images/logo_png.png"
-                            alt="imagen del logo de benjifit"></a></li>
-                <li><a href="inicio.html">Inicio</a></li>
+                <li id="logo-escritorio">
+                    <a href="../index.html">
+                        <picture>
+                            <img src="../Images/logo_png.png" alt="imagen del logo de benjifit">
+                        </picture>
+                    </a>
+                </li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="planes.html">Planes</a></li>
                 <li><a href="sobremi.html">Sobre mí</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li id="login-escritorio"><a href="login.html"><img src="../Icons/Login.svg"
-                            alt="icono para inicar sesion"></a>
+                <li id="login-escritorio">
+                    <a href="login.html">
+                        <picture>
+                            <img src="../Icons/Login.svg" alt="icono para inicar sesion">
+                        </picture>
+                    </a>
                 </li>
-                <li id="carrito-escritorio"><a href="carrito.html"><img src="../Icons/Carrito.svg"
-                            alt="icono que te lleva al carrito"></a></li>
+                <li id="carrito-escritorio">
+                    <a href="carrito.html">
+                        <picture>
+                            <img src="../Icons/Carrito.svg" alt="icono que te lleva al carrito">
+                        </picture>
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -58,7 +93,7 @@
             <div id="imagen-fondo">
             </div>
             <picture>
-                <img src="../Icons/Cerrar.svg" alt="">
+                <img src="../Icons/Cerrar.svg" alt="icono para cerrar el menu">
             </picture>
         </nav>
     </header>
@@ -79,15 +114,15 @@
             como llevo a cabo mi trabajo </p>
         <div id="reproductor">
 
-            <video id="videoHTML" poster="../Images/trailer.png">
-                <source src="../videos/trailer.webm">
-                <source src="../videos/trailer.ogv">
-                <source src="../videos/trailer.mp4">
-                <source src="../videos/trailer.swf">
+            <video id="videoHTML" poster="../Images/imagenVideo.png">
+                <source src="../videos/videoAnimado.webm">
+                <source src="../videos/videoAnimado.mp4">
+                <source src="../videos/videoAnimado.ogg">
+                <source src="../videos/videoAnimado.ogv">
             </video>
 
             <div id="controles">
-                <input id="barra-progreso" max="0" min="0" type="range">
+                <input id="barra-progreso" max="0" min="0" type="range" aria-label="barra de progreso">
                 <button id="play-pause"><svg id="svgPlay" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24">
                         <path
@@ -122,41 +157,33 @@
                         <path
                             d="M16 7v10c1.225-1.1 2-3.229 2-5s-.775-3.9-2-5zM4 17h2.697l5.748 3.832a1.004 1.004 0 0 0 1.027.05A1 1 0 0 0 14 20V4a1 1 0 0 0-1.554-.832L6.697 7H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2zm0-8h3c.033 0 .061-.016.093-.019a1.027 1.027 0 0 0 .38-.116c.026-.015.057-.017.082-.033L12 5.868v12.264l-4.445-2.964c-.025-.017-.056-.02-.082-.033a.986.986 0 0 0-.382-.116C7.059 15.016 7.032 15 7 15H4V9z" />
                     </svg></button>
-                <input id="barra-volumen" type="range" step="0.1" min="0" value="1" max="1">
-                <button id="fullscreen"><svg id="svgMute" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                <input id="barra-volumen" type="range" step="0.1" min="0" value="1" max="1" aria-label="barra para controlar volumen">
+                <button id="fullscreen"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24">
                         <path d="M5 5h5V3H3v7h2zm5 14H5v-5H3v7h7zm11-5h-2v5h-5v2h7zm-2-4h2V3h-7v2h5z" />
                     </svg></button>
             </div>
         </div>
 
-        <div id="galeria-imagenes-clientes">
-            <h2>Galeria Imagenes</h2>
-
-            <div id="contenido-galeria">
-                <img src="../Icons/Izquierda.svg" alt="icono para pasar hacia atrás el carrusel">
-
-                <div id="antes">
-                    <h3>Antes</h3>
-                    <img src="../Images/foto_basico.webp" alt="">
-                </div>
-
-                <div id="despues">
-                    <h3>Después</h3>
-                    <img src="../Images/Foto_Premium.webp" alt="">
-                </div>
-
-                <img src="../Icons/Derecha.svg" alt="icono para pasar hacia adelante el carrusel">
-            </div>
-
+        <h3>Galeria de images clientes</h3>
+        <div class="bxslider">
+            <div><img src="../Images/foto_basico.webp" alt="foto de un cliente antes del comienzo del plan"/></div>
+            <div><img src="../Images/Foto_Premium.webp" alt="foto de un cliente después del comienzo del plan" /></div>
+            <div><img src="../Images/imagen_fondo_movil.webp" alt="foto de un cliente antes del comienzo del plan"  /></div>
+            <div><img src="../Images/imagen_fondo_tablet.webp" alt="foto de un cliente después del comienzo del plan" /></div>
         </div>
-
     </main>
 
     <footer>
         <div id="social">
-            <a href="https://www.instagram.com/benji.ep/" target="_blank"><img src="../Icons/Instagram.svg" alt="icono con enlace al canal de benjifit de instagram"></a>
-            <a href="" target="_blank"><img src="../Icons/Youtube.svg" alt="icono con enlace al canal de benjifit de youtube"></a>
+            <a href="https://www.instagram.com/benji.ep/" target="_blank">
+                <picture><img src="../Icons/Instagram.svg" alt="icono con enlace al canal de benjifit de instagram">
+                </picture>
+            </a>
+            <a href="" target="_blank">
+                <picture><img src="../Icons/Youtube.svg" alt="icono con enlace al canal de benjifit de youtube">
+                </picture>
+            </a>
         </div>
 
         <nav id="social-links">

@@ -2,23 +2,30 @@ $(document).ready(function () {
 
     // muestra el menu hambruguesa y quita scroll
     $("header>nav#menu-navegacion-movil>ul>li#icono-hamburguesa").on("click", function () {
-        $("header>nav#menu-desplegable").css({ display: "flex", "flex-direction": "column" })
-        $("header>nav#menu-desplegable img").css({ display: "flex", "align-self": "", "justify-self": "center" })
+        $("header>nav#menu-desplegable").stop().slideDown().css({ display: "flex", "flex-direction": "column" })
+        $("header>nav#menu-desplegable picture").stop().slideDown().css({ display: "flex", "align-self": "center", "justify-self": "center" })
         $('*').css('overflow-y', 'hidden');
     })
-    
+
     // cierra el menu cuando se le da a la X y pone el scroll
-    $("header>nav#menu-desplegable img").on("click", function () {
-        $("header>nav#menu-desplegable").toggle();
+    $("header>nav#menu-desplegable picture").on("click", function () {
+        $("header>nav#menu-desplegable").stop().slideUp();
         $('*').css('overflow-y', 'auto');
     });
 
-
+  
     // cuando se redimensiona, se cierra el menu
-    $(window).on("resize", function () {
-        $("header>nav#menu-desplegable").css({
-            "display": "none",
-        })
+    $(window).resize(function () {
+        $("header>nav#menu-desplegable").slideUp()
+        $('*').css('overflow-y', 'auto');
     })
 
+    // slider
+    $('.bxslider').bxSlider({
+        infiniteLoop: false,
+        hideControlOnEnd: true,
+        slideWidth: 400,
+        minSlides: 2,
+        maxSlides: 2,
+    });
 })

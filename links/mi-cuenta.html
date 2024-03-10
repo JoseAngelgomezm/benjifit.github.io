@@ -14,39 +14,72 @@
     <script src="../jq/jquery-3.7.1.js"></script>
     <script src="../script/eventosRaton.js"></script>
     <script src="../script/menu-cuenta-desplegable.js"></script>
+    <script src="../script/controlformulario.js"></script>
 </head>
 
 <body>
     <div class="transparente"></div>
 
     <header>
-
         <nav id="menu-navegacion-movil">
             <ul>
-                <li id="logo-movil"><a href="../index.html"><img id="img-logo-movil" src="../Images/logo_png.png"
-                            alt="iamgen del logo de benjifit"></a></li>
-                <li id="login"><a href="login.html"><img src="../Icons/Login.svg" alt="icono para inicar sesion"></a>
+                <li id="logo-movil">
+                    <a href="../index.html">
+                        <picture>
+                            <img id="img-logo-movil" src="../Images/logo_png.png" alt="iamgen del logo de benjifit">
+                        </picture>
+                    </a>
                 </li>
-                <li id="carrito"><a href="carrito.html"><img src="../Icons/Carrito.svg"
-                            alt="icono que te lleva al carrito"></a></li>
-                <li id="icono-hamburguesa"><img id="hamburguesa" src="../Icons/Hamburguesa.svg"
-                        alt="icono que despliega el menu de navegacion"></li>
+                <li id="login">
+                    <a href="login.html">
+                        <picture>
+                            <img src="../Icons/Login.svg" alt="icono para inicar sesion">
+                        </picture>
+                    </a>
+                </li>
+                <li id="carrito">
+                    <a href="carrito.html">
+                        <picture>
+                            <img src="../Icons/Carrito.svg" alt="icono que te lleva al carrito">
+                        </picture>
+                    </a>
+                </li>
+                <li id="icono-hamburguesa">
+                    <picture>
+                        <img id="hamburguesa" src="../Icons/Hamburguesa.svg"
+                            alt="icono que despliega el menu de navegacion">
+                    </picture>
+                </li>
             </ul>
         </nav>
 
         <nav id="menu-navegacion-escritorio">
             <ul>
-                <li id="logo-escritorio"><a href="index.html"><img src="../Images/logo_png.png"
-                            alt="imagen del logo de benjifit"></a></li>
-                <li><a href="inicio.html">Inicio</a></li>
+                <li id="logo-escritorio">
+                    <a href="../index.html">
+                        <picture>
+                            <img src="../Images/logo_png.png" alt="imagen del logo de benjifit">
+                        </picture>
+                    </a>
+                </li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="planes.html">Planes</a></li>
                 <li><a href="sobremi.html">Sobre mí</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li id="login-escritorio"><a href="login.html"><img src="../Icons/Login.svg"
-                            alt="icono para inicar sesion"></a>
+                <li id="login-escritorio">
+                    <a href="login.html">
+                        <picture>
+                            <img src="../Icons/Login.svg" alt="icono para inicar sesion">
+                        </picture>
+                    </a>
                 </li>
-                <li id="carrito-escritorio"><a href="carrito.html"><img src="../Icons/Carrito.svg"
-                            alt="icono que te lleva al carrito"></a></li>
+                <li id="carrito-escritorio">
+                    <a href="carrito.html">
+                        <picture>
+                            <img src="../Icons/Carrito.svg" alt="icono que te lleva al carrito">
+                        </picture>
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -61,7 +94,7 @@
             <div id="imagen-fondo">
             </div>
             <picture>
-                <img src="../Icons/Cerrar.svg" alt="">
+                <img src="../Icons/Cerrar.svg" alt="icono para cerrar el menu">
             </picture>
         </nav>
     </header>
@@ -80,27 +113,31 @@
         <h3 class="rojo">Jose Angel</h3>
 
         <form action="#">
-            <div id="email">
+            <div id="div-email">
                 <div>
                     <label for="email">Email<span class="rojo">*</span></label>
-                    <input type="email" name="email" id="email">
+                    <input class="requerido" type="email" name="email" id="email">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="confirmar-email">Confirmar email<span class="rojo">*</span></label>
-                    <input type="email" name="email" id="confirmar-email">
+                    <input class="requerido" type="email" name="email" id="confirmar-email">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
             </div>
 
             <div id="clave">
                 <div>
                     <label for="contraseña-nueva">Contraseña nueva:<span class="rojo">*</span></label>
-                    <input type="password" name="contraseña-nueva" id="contraseña-nueva">
+                    <input class="requerido" type="password" name="contraseña-nueva" id="contraseña-nueva">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="confirmar-contraseña">Confimrar contraseña:<span class="rojo">*</span></label>
-                    <input type="password" name="confirmar-contraseña" id="confirmar-contraseña">
+                    <input class="requerido" type="password" name="confirmar-contraseña" id="confirmar-contraseña">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
             </div>
 
@@ -108,26 +145,31 @@
                 <div class="completo">
                     <label for="empresa">Empresa:</label>
                     <input type="text" name="empresa" id="empresa">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="codigo-postal">Codigo postal:<span class="rojo">*</span></label>
-                    <input type="number" name="codigo-postal" id="codigo-postal">
+                    <input class="requerido" type="number" name="codigo-postal" id="codigo-postal">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="poblacion">Poblacion:<span class="rojo">*</span></label>
-                    <input type="text" name="poblacion" id="poblacion">
+                    <input class="requerido" type="text" name="poblacion" id="poblacion">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="telefono-movil">Telefono movil:<span class="rojo">*</span></label>
-                    <input type="text" name="telefono-movil" id="telefono-movil">
+                    <input class="requerido" type="text" name="telefono-movil" id="telefono-movil">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="provincia">Provincia:<span class="rojo">*</span></label>
-                    <input type="text" name="provincia" id="provincia">
+                    <input class="requerido" type="text" name="provincia" id="provincia">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
             </div>
 
