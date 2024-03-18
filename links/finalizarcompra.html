@@ -13,12 +13,19 @@
 
     <script src="../jq/jquery-3.7.1.js"></script>
     <script src="../script/eventosRaton.js"></script>
+    <script src="../script/controlformulario.js"></script>
 </head>
 
 <body>
     <header>
         <nav id="menu-navegacion-movil">
             <ul>
+                <li id="icono-hamburguesa">
+                    <picture>
+                        <img id="hamburguesa" src="../Icons/Hamburguesa.svg"
+                            alt="icono que despliega el menu de navegacion">
+                    </picture>
+                </li>
                 <li id="logo-movil">
                     <a href="../index.html">
                         <picture>
@@ -27,25 +34,20 @@
                     </a>
                 </li>
                 <li id="login">
-                    <a href="login.html">
+                    <a href="../links/login.html">
                         <picture>
                             <img src="../Icons/Login.svg" alt="icono para inicar sesion">
                         </picture>
                     </a>
                 </li>
                 <li id="carrito">
-                    <a href="carrito.html">
+                    <a href="../links/carrito.html">
                         <picture>
                             <img src="../Icons/Carrito.svg" alt="icono que te lleva al carrito">
                         </picture>
                     </a>
                 </li>
-                <li id="icono-hamburguesa">
-                    <picture>
-                        <img id="hamburguesa" src="../Icons/Hamburguesa.svg"
-                            alt="icono que despliega el menu de navegacion">
-                    </picture>
-                </li>
+                
             </ul>
         </nav>
 
@@ -105,74 +107,88 @@
             <div id="datos-cliente">
                 <div>
                     <label for="nombre">Nombre:</label><span class="rojo">*</span>
-                    <input type="text" name="nombre" id="nombre" aria-label="introduce tu nombre">
+                    <input class="requerido" type="text" name="nombre" id="nombre" aria-label="introduce tu nombre">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="apellidos">Apellidos:</label><span class="rojo">*</span>
-                    <input type="text" name="apellidos" id="apellidos" aria-label="introduce tus apellidos">
+                    <input class="requerido" type="text" name="apellidos" id="apellidos" aria-label="introduce tus apellidos">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div class="completo">
                     <label for="empresa">Empresa:</label>
                     <input type="text" name="empresa" id="empresa" aria-label="introduce la empresa a la que perteneces">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
 
                 <div>
                     <label for="poblacion">Poblacion: <span class="rojo">*</span></label>
-                    <input type="text" name="poblacion" id="poblacion" aria-label="introduce tu poblacion">
+                    <input class="requerido" type="text" name="poblacion" id="poblacion" aria-label="introduce tu poblacion">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="codigopostal">Código Postal: <span class="rojo">*</span></label>
-                    <input type="number" name="codigopostal" id="codigopostal" aria-label="introduce tu codigo postal">
+                    <input class="requerido" type="number" name="codigopostal" id="codigopostal" aria-label="introduce tu codigo postal">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="provincia">Provincia: <span class="rojo">*</span></label>
-                    <input type="text" name="provincia" id="provincia" aria-label="introduce tu provincia">
+                    <input class="requerido" type="text" name="provincia" id="provincia" aria-label="introduce tu provincia">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="pais-region">País/Región: <span class="rojo">*</span></label>
-                    <input type="text" name="pais-region" id="pais-region"  aria-label="introduce tu pais">
+                    <input class="requerido" type="text" name="pais-region" id="pais-region"  aria-label="introduce tu pais">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="telefono-movil">Teléfono-móvil: <span class="rojo">*</span></label>
-                    <input type="number" name="telefono-movil" id="telefono-movil" aria-label="introduce tu telfono movil">
+                    <input class="requerido" type="number" name="telefono-movil" id="telefono-movil" aria-label="introduce tu telfono movil">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="telefono-fijo">Telefono-fijo</label>
                     <input type="text" maxlength="9" name="telefono-fijo" id="telefono-fijo" aria-label="introduce tu telfono fijo">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div class="completo">
                     <label for="correo-electronico">Correo electónico: <span class="rojo">*</span></label>
-                    <input type="email" name="correo-electronico" id="correo-electronico" aria-label="introduce tu email">
+                    <input class="requerido" type="email" name="correo-electronico" id="correo-electronico" aria-label="introduce tu email">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div class="completo">
                     <label for="confirmar-correo-electronico">Confirmar correo: <span class="rojo">*</span></label>
-                    <input type="email" name="confirmar-correo-electronico" id="confirmar-correo-electronico" aria-label="introduce tu email para confirmar">
+                    <input class="requerido" type="email" name="confirmar-correo-electronico" id="confirmar-correo-electronico" aria-label="introduce tu email para confirmar">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div class="completo">
                     <input type="checkbox" name="crear-cuenta" id="crear-cuenta" aria-label="selecciona si quieres crear una cuenta con estos datos">
                     <label for="crear-cuenta">¿Crear una cuenta?</label>
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="informacion-adicional">Información adicional:</label>
                     <input type="text" name="informacion-adicional" id="informacion-adicional" aria-label="introduce informacion adicional">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div class="completo">
                     <input type="checkbox" name="politica-privacidad" id="politica-privacidad" aria-label="seleciona si aceptas la politica de privacidad">
                     <label class="letra-pequeña" for="politica-privacidad">Acepto las condiciones de uso, poítica de
                         privacidad y aviso legal.</label>
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
             </div>
@@ -205,17 +221,20 @@
 
                 <div class="completo">
                     <label for="numero-tarjeta">Numero de tarjeta:<span class="rojo">*</span></label>
-                    <input type="text" name="numero-tarjeta" id="numero-tarjeta">
+                    <input class="requerido" type="text" name="numero-tarjeta" id="numero-tarjeta">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="fecha-validez">Fecha de validez:<span class="rojo">*</span></label>
-                    <input type="text" name="fecha-validez" id="fecha-validez">
+                    <input class="requerido" type="text" name="fecha-validez" id="fecha-validez">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
                 <div>
                     <label for="cvv">CVV:<span class="rojo">*</span></label>
-                    <input type="text" name="cvv" id="cvv">
+                    <input class="requerido" type="text" name="cvv" id="cvv">
+                    <span class="error">Este campo es obligatorio</span>
                 </div>
 
             </div>

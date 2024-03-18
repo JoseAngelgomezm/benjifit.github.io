@@ -12,36 +12,49 @@
     <!-- Fuente krona one -->
     <link rel="preload" href="https://fonts.googleapis.com" as="font">
     <link rel="preload" href="https://fonts.gstatic.com" as="font" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
 
     <!-- Fuente Raleway -->
     <link rel="preload" href="https://fonts.googleapis.com" as="font">
     <link rel="preload" href="https://fonts.gstatic.com" crossorigin as="font">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Fuente poppins -->
     <link rel="preload" href="https://fonts.googleapis.com" as="font">
     <link rel="preload" href="https://fonts.gstatic.com" crossorigin as="font">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" as="font">
+        rel="stylesheet">
 
     <!-- Fuente Montserrat -->
     <link rel="preload" href="https://fonts.googleapis.com" as="font">
     <link rel="preload" href="https://fonts.gstatic.com" crossorigin as="font">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" as="font">
+        rel="stylesheet">
 
     <script src="jq/jquery-3.7.1.js"></script>
     <script src="script/eventosRaton.js"></script>
+    <script src="script/aceptar-cookies.js"></script>
 </head>
 
 <body>
+    <div id="politica-cookies">
+        <p>Usamos cookies para mejorar su experiencia de navegación en nuestra web, para mostrarle contenidos personalizados y para analizar el tráfico en nuestra web.</p>
+        <a href="links/cookies.html">Ver política de cookies</a>
+        <div id="botones-cookies">
+            <button>Aceptar</button><button>Rechazar</button>
+        </div>
+    </div>
 
     <header>
         <nav id="menu-navegacion-movil">
             <ul>
+                <li id="icono-hamburguesa">
+                    <picture>
+                        <img id="hamburguesa" src="Icons/Hamburguesa.svg"
+                            alt="icono que despliega el menu de navegacion">
+                    </picture>
+                </li>
                 <li id="logo-movil">
                     <a href="index.html">
                         <picture>
@@ -63,12 +76,7 @@
                         </picture>
                     </a>
                 </li>
-                <li id="icono-hamburguesa">
-                    <picture>
-                        <img id="hamburguesa" src="Icons/Hamburguesa.svg"
-                            alt="icono que despliega el menu de navegacion">
-                    </picture>
-                </li>
+                
             </ul>
         </nav>
 
@@ -93,7 +101,7 @@
                     </a>
                 </li>
                 <li id="carrito-escritorio">
-                    <a href="carrito.html">
+                    <a href="links/carrito.html">
                         <picture>
                             <img src="Icons/Carrito.svg" alt="icono que te lleva al carrito">
                         </picture>
@@ -130,8 +138,9 @@
         </nav>
 
         <section id="introduccion">
+            <h2>Breve introduccion al fundo del fitness</h2>
             <div id="texto-introduccion">
-                <p>Breve introduccion al fitness</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             <div id="imagen-introduccion">
                 <picture>

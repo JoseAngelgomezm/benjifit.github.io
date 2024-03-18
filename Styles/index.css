@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+header ul{
+    list-style: none;
+}
+
 h2,
 h3,
 a,
@@ -298,6 +302,14 @@ form.registro button:hover {
     }
 }
 
+@media(min-width:1200px) {
+    form.registro{
+        width: 80%;
+        align-self: center;
+    }
+    
+}
+
 /* FIN FORMULARIO REGISTRO */
 
 
@@ -569,8 +581,37 @@ header>nav#menu-navegacion-movil>ul {
     width: 100%;
     align-items: flex-end;
     gap: 2rem;
-    justify-content: space-between;
 }
+
+header>nav#menu-navegacion-movil>ul > li:nth-child(1) img{
+    transform: scaleX(-1);
+}
+
+header>nav#menu-navegacion-movil>ul > li:nth-child(3) img{
+    width: 60px;
+    height: 40px;
+}
+
+header>nav#menu-navegacion-movil>ul > li:nth-child(1) img,
+header>nav#menu-navegacion-movil>ul > li:nth-child(4) img
+{
+    width: 40px;
+    height: 40px;
+}
+
+
+header>nav#menu-navegacion-movil>ul > li:nth-child(2){
+    margin: 0 auto;
+}
+
+header>nav#menu-navegacion-movil>ul > li:nth-child(3),
+header>nav#menu-navegacion-movil>ul > li:nth-child(4)
+
+{
+
+}
+
+
 
 header>nav#menu-navegacion-movil>ul>li#logo-movil>a>img#img-logo-movil {
     max-width: 200px;
@@ -599,7 +640,7 @@ header>nav#menu-desplegable div#imagen-fondo {
     left: 0;
     background-repeat: repeat;
     background-size: calc(100% / 3) calc(100% / 7);
-    opacity: 0.15;
+    opacity: 0.05;
     z-index: -1;
 }
 
@@ -609,8 +650,20 @@ header>nav#menu-desplegable>ul {
     list-style: none;
 }
 
+#menu-desplegable > picture {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 3rem;
+}
+
+
+header>nav#menu-desplegable>ul li a:hover {
+   color: red;
+}
+
 header>nav#menu-desplegable picture {
-    width: 80px;
+    width: 65px;
 }
 
 header>nav#menu-desplegable picture:hover {
@@ -626,45 +679,6 @@ header>nav#menu-desplegable>ul>li>a {
     text-decoration: none;
 }
 
-
-@media (min-width:720px) {
-
-    header>nav#menu-navegacion-movil>ul {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        gap: 2rem;
-        justify-content: space-between;
-    }
-
-    header>nav#menu-navegacion-movil>ul>li#icono-hamburguesa {
-        margin-left: 1rem;
-    }
-
-    header>nav#menu-navegacion-movil>ul>li#icono-hamburguesa img {
-        transform: scaleX(-1);
-    }
-
-    header>nav#menu-navegacion-movil>ul>li#carrito {
-        margin-right: 1rem;
-    }
-
-    header>nav#menu-navegacion-movil>ul>li#logo-movil {
-        order: 1;
-    }
-
-    header>nav#menu-navegacion-movil>ul>li#login {
-        order: 2;
-    }
-
-    header>nav#menu-navegacion-movil>ul>li#carrito {
-        order: 3;
-    }
-
-    header>nav#menu-navegacion-movil>ul>li#icono-hamburugesa {
-        order: 0;
-    }
-}
 
 @media (min-width:1200px) {
 
@@ -708,13 +722,45 @@ header>nav#menu-desplegable>ul>li>a {
 /* INICIO DE INDEX */
 
 main nav#menu-index {
-    display: flex;
     flex-direction: column;
     height: 100vh;
     background-color: aqua;
     background: url("../Images/imagen_fondo_movil.webp");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+div#politica-cookies{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    background-color: white;
+    display: none;
+}
+
+div#politica-cookies a{
+    margin-top: 1rem;
+    color: #0A0A0A;
+    border-radius: 8px;
+}
+
+div#politica-cookies div#botones-cookies{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+div#politica-cookies div#botones-cookies button{
+    border: none;
+    padding: .5rem;
+    flex: 40% 0;
+    background-color: #0A0A0A;
+    border-radius: 8px;
+    color: white;
 }
 
 main nav#menu-index ul {
@@ -748,25 +794,36 @@ main nav#menu-index ul li a {
     padding: 1rem;
 }
 
-
 main section#introduccion {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 4rem 0;
-
 }
 
 main section#introduccion div {
     padding: 2rem;
 }
 
+main section#introduccion h2 {
+    flex: 100%;
+    padding: 2rem;
+}
+
 main section#introduccion div#texto-introduccion {
     flex: 60% 0;
-
+    align-self: center;
 }
 
 main section#introduccion div#imagen-introduccion {
     flex: 40% 0;
+    text-align: end;
+    align-self: center;
+}
+
+main section#introduccion div#imagen-introduccion img {
+    width: 120px;
+    height: 220px;
 }
 
 main section#introduccion div picture,
@@ -792,6 +849,7 @@ main section#objetivos {
 
 main section#objetivos h3 {
     font-size: 11pt;
+    text-align: center;
 }
 
 main section#objetivos div {
@@ -804,10 +862,14 @@ main section#objetivos div {
 main section#objetivos div ul {
     padding: 1rem;
     align-self: self-start;
+    list-style: none;
 }
 
 main section#objetivos div ul li {
-    padding: 1rem;
+    padding: 1.5rem;
+}
+main section#objetivos div ul li:nth-child(1){
+    margin-top: 2rem;
 }
 
 
@@ -817,6 +879,28 @@ main section#objetivos div ul li {
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    main section#introduccion div#imagen-introduccion img {
+        width: 210px;
+        height: 400px;
+    }
+
+    main section#objetivos div ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    main section#objetivos div ul li {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    main section#objetivos div ul li:nth-child(1){
+        margin-top: 0rem;
+    }
+    
+
 }
 
 @media(min-width:1280px) {
@@ -842,6 +926,11 @@ main section#objetivos div ul li {
     main nav#menu-index ul li:nth-child(1) {
         font-size: 30pt;
     }
+
+    main section#introduccion div#imagen-introduccion img {
+        width: 410px;
+        height: 620px;
+    }
 }
 
 /* FIN DE INDEX */
@@ -852,7 +941,9 @@ main#planes {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
+
 
 article.planes {
     display: flex;
@@ -950,6 +1041,7 @@ main#planes section#faqs dl {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    flex: 100% 0 0;
 }
 
 main#planes section#faqs div {
@@ -1303,7 +1395,6 @@ main#finalizar-compra div#links-inicio-registro {
 }
 
 main#finalizar-compra div.productos {
-    border: solid #0A0A0A 1px;
     margin-top: 1rem;
 }
 
@@ -1489,6 +1580,7 @@ main#main-login div#formulario-login button:hover {
 main#registro {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 
@@ -1503,16 +1595,6 @@ main#registro button {
     margin-top: 30px;
     margin-bottom: 30px;
     height: 50px;
-}
-
-@media (min-width:1200px) {
-    main#registro {
-        height: 100vh;
-    }
-
-    main#registro * {
-        font-size: 11pt;
-    }
 }
 
 /* FIN REGISTRO */
